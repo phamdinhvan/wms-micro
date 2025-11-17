@@ -1,0 +1,38 @@
+{
+  "name": "@wms/gantt",
+  "version": "0.1.0",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    },
+    "./styles.css": "./dist/styles.css"
+  },
+  "files": [
+    "dist"
+  ],
+  "sideEffects": [
+    "**/*.css"
+  ],
+  "scripts": {
+    "build": "vite build",
+    "test": "vitest",
+    "lint": "eslint .",
+    "dev": "vite",
+    "peers:install": "yarn dlx install-peers-cli || true"
+  },
+  "peerDependencies": {
+    "@wms/core": "workspace:*"
+  },
+  "devDependencies": {
+    "@wms/build-config": "workspace:*",
+    "@wms/eslint-config": "workspace:*",
+    "@wms/typescript-config": "workspace:*",
+    "vite": "^7.1.7"
+  }
+}

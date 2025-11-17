@@ -1,0 +1,725 @@
+{
+  "language": "vi",
+  "project": {
+    "title": "Dự án",
+    "selectPlaceholder": "Chọn dự án",
+    "noProjects": "Không có dự án",
+    "create": "Tạo dự án",
+    "actions": {
+      "create": "Tạo dự án",
+      "edit": "Chỉnh sửa dự án",
+      "delete": "Xóa dự án",
+      "archive": "Lưu trữ dự án",
+      "restore": "Khôi phục dự án"
+    },
+    "group": {
+      "basic": "Thông tin cơ bản",
+      "schedule": "Lịch trình",
+      "people": "Người",
+      "extra": "Extra"
+    },
+    "table": {
+      "noData": "Không có dữ liệu",
+      "loading": "Đang tải...",
+      "name": "Tên",
+      "code": "Mã",
+      "status": "Trạng thái",
+      "priority": "Ưu tiên",
+      "startDate": "Ngày bắt đầu",
+      "endDate": "Ngày kết thúc",
+      "budget": "Ngân sách",
+      "templateId": "Mã mẫu",
+      "progress": "Tiến độ",
+      "actualCost": "Chi phí thực tế",
+      "application": "Ứng dụng",
+      "manager": "Quản lý",
+      "description": "Mô tả",
+      "actualStartDate": "Ngày bắt đầu thực tế",
+      "actualEndDate": "Ngày kết thúc thực tế",
+      "assignee": "Người phụ trách",
+      "actualDateRange": "Thời gian thực tế",
+      "dateRange": "Thời gian dự tính"
+    },
+    "detail": {
+      "information": "Thông tin dự án",
+      "additionalInfo": "Thông tin bổ sung",
+      "id": "ID dự án",
+      "externalId": "ID ngoài",
+      "actualStartDate": "Ngày bắt đầu thực tế",
+      "actualEndDate": "Ngày kết thúc thực tế",
+      "assignee": "Người được giao",
+      "contextKey": "Khóa ngữ cảnh",
+      "templateId": "ID mẫu",
+      "createdAt": "Ngày tạo",
+      "updatedAt": "Ngày cập nhật",
+      "appId": "ID ứng dụng",
+      "duration": "Thời gian",
+      "elapsed": "Đã trôi qua",
+      "details": "Chi tiết",
+      "delay": "Độ trễ",
+      "progress": "Tiến độ"
+    },
+    "untitled": "Dự án chưa có tên",
+    "notFound": "Không tìm thấy dự án",
+    "loadError": "Không thể tải thông tin dự án",
+    "noDescription": "Không có mô tả",
+    "form": {
+      "externalId": {
+        "label": "ID Ngoài",
+        "placeholder": "Nhập ID ngoài"
+      },
+      "name": {
+        "label": "Tên",
+        "placeholder": "Nhập tên dự án"
+      },
+      "code": {
+        "label": "Mã",
+        "placeholder": "Nhập mã dự án"
+      },
+      "key": {
+        "label": "Khóa",
+        "placeholder": "Nhập khóa dự án"
+      },
+      "type": {
+        "label": "Loại dự án",
+        "placeholder": "Chọn loại dự án",
+        "main": "Dự án chính",
+        "sub": "Dự án phụ"
+      },
+      "description": {
+        "label": "Mô tả",
+        "placeholder": "Nhập mô tả dự án"
+      },
+      "assignee": {
+        "label": "Người được giao",
+        "placeholder": "Chọn người được giao"
+      },
+      "collaborators": {
+        "label": "Cộng tác viên",
+        "placeholder": "Chọn cộng tác viên"
+      },
+      "startDate": {
+        "label": "Ngày bắt đầu"
+      },
+      "endDate": {
+        "label": "Ngày kết thúc"
+      },
+      "actualStartDate": {
+        "label": "Ngày bắt đầu thực tế"
+      },
+      "actualEndDate": {
+        "label": "Ngày kết thúc thực tế"
+      },
+      "status": {
+        "label": "Trạng thái"
+      },
+      "attributes": {
+        "label": "Thuộc tính"
+      },
+      "budget": {
+        "label": "Ngân sách",
+        "placeholder": "Nhập ngân sách"
+      },
+      "templateId": {
+        "label": "Mã mẫu",
+        "placeholder": "Nhập mã mẫu"
+      },
+      "progress": {
+        "label": "Tiến độ",
+        "placeholder": "Nhập phần trăm tiến độ"
+      },
+      "actualCost": {
+        "label": "Chi phí thực tế",
+        "placeholder": "Nhập chi phí thực tế"
+      },
+      "application": {
+        "label": "Ứng dụng",
+        "placeholder": "Nhập thông tin ứng dụng"
+      },
+      "manager": {
+        "label": "Quản lý",
+        "placeholder": "Chọn quản lý"
+      },
+      "customFields": {
+        "label": "Trường tùy chỉnh"
+      }
+    },
+    "status": {
+      "active": "Hoạt động",
+      "inactive": "Không hoạt động",
+      "completed": "Hoàn thành",
+      "on-hold": "Tạm dừng",
+      "onHold": "Tạm dừng"
+    },
+    "notification": {
+      "createSuccess": "Dự án đã được tạo thành công.",
+      "createError": "Dự án không thể tạo.",
+      "updateSuccess": "Dự án đã được cập nhật thành công.",
+      "updateError": "Dự án không thể cập nhật.",
+      "deleteSuccess": "Dự án đã được xóa thành công.",
+      "deleteError": "Dự án không thể xóa."
+    },
+    "confirmation": {
+      "create": "Bạn có chắc chắn muốn tạo dự án này?",
+      "update": "Bạn có chắc chắn muốn cập nhật dự án này?",
+      "delete": "Bạn có chắc chắn muốn xóa dự án này?"
+    },
+    "validation": {
+      "nameRequired": "Tên là bắt buộc",
+      "descriptionRequired": "Mô tả là bắt buộc",
+      "keyRequired": "Khóa là bắt buộc",
+      "startDateRequired": "Ngày bắt đầu là bắt buộc",
+      "endDateRequired": "Ngày kết thúc là bắt buộc",
+      "statusRequired": "Trạng thái là bắt buộc",
+      "invalidDate": "Ngày không hợp lệ",
+      "endDateAfterStart": "Ngày kết thúc phải sau ngày bắt đầu",
+      "actualEndDateAfterActualStart": "Ngày kết thúc thực tế phải sau ngày bắt đầu thực tế"
+    }
+  },
+  "task": {
+    "title": "Công việc",
+    "actions": {
+      "create": "Tạo công việc",
+      "createChild": "Tạo công việc con",
+      "edit": "Chỉnh sửa công việc",
+      "delete": "Xóa công việc",
+      "complete": "Hoàn thành công việc",
+      "reopen": "Mở lại công việc"
+    },
+    "group": {
+      "basic": "Thông tin cơ bản",
+      "schedule": "Lịch trình",
+      "people": "Người",
+      "extra": "Extra"
+    },
+    "form": {
+      "title": {
+        "create": "Tạo công việc",
+        "edit": "Cập nhật công việc"
+      },
+      "projectId": {
+        "label": "ID dự án",
+        "placeholder": "Nhập ID dự án"
+      },
+      "externalId": {
+        "label": "ID bên ngoài",
+        "placeholder": "Nhập ID bên ngoài"
+      },
+      "name": {
+        "label": "Tên công việc",
+        "placeholder": "Nhập tên công việc"
+      },
+      "description": {
+        "label": "Mô tả",
+        "placeholder": "Nhập mô tả công việc"
+      },
+      "startDate": {
+        "label": "Ngày bắt đầu",
+        "placeholder": "Chọn ngày bắt đầu"
+      },
+      "endDate": {
+        "label": "Ngày kết thúc",
+        "placeholder": "Chọn ngày kết thúc"
+      },
+      "status": {
+        "label": "Trạng thái"
+      },
+      "priority": {
+        "label": "Ưu tiên"
+      },
+      "attribute": "Thuộc tính",
+      "type": {
+        "label": "Loại"
+      },
+      "level": {
+        "label": "Cấp độ",
+        "placeholder": "Nhập cấp độ"
+      },
+      "category": {
+        "label": "Danh mục",
+        "placeholder": "Nhập danh mục"
+      },
+      "notes": {
+        "label": "Ghi chú",
+        "placeholder": "Nhập ghi chú"
+      },
+      "assignee": {
+        "label": "Người phụ trách",
+        "placeholder": "Chọn người phụ trách"
+      },
+      "manager": {
+        "label": "Quản lý",
+        "placeholder": "Chọn quản lý"
+      },
+      "parentId": {
+        "label": "Công việc cha",
+        "placeholder": "Chọn công việc cha"
+      },
+      "dependencies": {
+        "label": "Phụ thuộc",
+        "placeholder": "Chọn các công việc phụ thuộc"
+      },
+      "progress": {
+        "label": "Tiến độ",
+        "placeholder": "Nhập phần trăm tiến độ"
+      },
+      "customFields": {
+        "label": "Trường tùy chỉnh"
+      },
+      "tags": {
+        "label": "Thẻ",
+        "placeholder": "Nhập thẻ"
+      },
+      "externalFields": "Trường Mở Rộng"
+    },
+    "validation": {
+      "startDateBeforeProject": "Ngày bắt đầu công việc không thể trước ngày bắt đầu dự án",
+      "endDateBeforeStart": "Ngày kết thúc công việc không thể trước ngày bắt đầu"
+    },
+    "notification": {
+      "create": "Tạo công việc thành công",
+      "update": "Cập nhật công việc thành công",
+      "delete": "Xóa công việc thành công"
+    },
+    "confirmation": {
+      "create": "Bạn có chắc muốn tạo công việc này?",
+      "update": "Bạn có chắc muốn cập nhật công việc này?",
+      "delete": "Bạn có chắc muốn xóa công việc này?"
+    },
+    "tabs": {
+      "details": "Chi tiết",
+      "dependencies": "Phụ thuộc"
+    },
+    "dependencies": {
+      "title": "Phụ thuộc công việc",
+      "add": "Thêm phụ thuộc",
+      "empty": "Chưa có phụ thuộc nào được cấu hình",
+      "targetTask": "Công việc đích",
+      "relationType": "Loại quan hệ",
+      "delayDays": "Trì hoãn (Ngày)",
+      "selectTask": "Chọn một công việc",
+      "selectRelationType": "Chọn loại quan hệ",
+      "description": "Phụ thuộc định nghĩa các mối quan hệ giữa các công việc. Ví dụ, phụ thuộc Finish-to-Start (FS) có nghĩa là công việc đích không thể bắt đầu cho đến khi công việc này hoàn thành.",
+      "relationTypes": {
+        "FS": "Kết thúc-Bắt đầu (FS)",
+        "SS": "Bắt đầu-Bắt đầu (SS)",
+        "FF": "Kết thúc-Kết thúc (FF)",
+        "SF": "Bắt đầu-Kết thúc (SF)",
+        "FSDescription": "Công việc đích bắt đầu sau khi công việc này kết thúc",
+        "SSDescription": "Công việc đích bắt đầu khi công việc này bắt đầu",
+        "FFDescription": "Công việc đích kết thúc khi công việc này kết thúc",
+        "SFDescription": "Công việc đích kết thúc sau khi công việc này bắt đầu"
+      },
+      "dragDrop": {
+        "dragging": "Kéo để kết nối các công việc",
+        "dropToConnect": "Thả vào nút công việc đích để tạo quan hệ",
+        "duplicateRelation": "Đã tồn tại quan hệ giữa hai công việc này",
+        "selfRelation": "Không thể tạo quan hệ từ công việc tới chính nó",
+        "relationCreated": "Đã tạo quan hệ công việc thành công",
+        "relationFailed": "Không thể tạo quan hệ công việc"
+      }
+    },
+    "relations": {
+      "validation": {
+        "targetTaskRequired": "Công việc đích là bắt buộc",
+        "relationTypeRequired": "Loại quan hệ là bắt buộc",
+        "invalidRelationType": "Loại quan hệ không hợp lệ"
+      }
+    }
+  },
+  "common": {
+    "lang": "vi",
+    "required": "*",
+    "today": "Hôm nay",
+    "characters": "Ký tự",
+    "loading": "Đang tải...",
+    "refresh": "Làm mới",
+    "cancel": "Hủy",
+    "days": "ngày",
+    "status": {
+      "active": "Hoạt động",
+      "archived": "Đã lưu trữ",
+      "on-hold": "Tạm dừng",
+      "new": "Mới",
+      "in_progress": "Đang thực hiện",
+      "completed": "Hoàn thành",
+      "cancelled": "Đã hủy",
+      "on_hold": "Tạm dừng",
+      "select": "Chọn trạng thái"
+    },
+    "priority": {
+      "low": "Thấp",
+      "medium": "Trung bình",
+      "normal": "Bình thường",
+      "high": "Cao",
+      "urgent": "Khẩn cấp"
+    },
+    "type": {
+      "task": "Công việc",
+      "milestone": "Cột mốc",
+      "epic": "Epic",
+      "story": "Câu chuyện",
+      "bug": "Lỗi",
+      "feature": "Tính năng"
+    },
+    "assignee": {
+      "none": "Chưa phân công",
+      "placeholder": "Chọn người phụ trách"
+    }
+  },
+  "button": {
+    "create": "Tạo",
+    "save": "Lưu",
+    "cancel": "Hủy",
+    "delete": "Xóa",
+    "edit": "Sửa",
+    "add": "Thêm",
+    "remove": "Xóa",
+    "confirm": "Xác nhận",
+    "close": "Đóng",
+    "back": "Quay lại",
+    "backToList": "Quay lại danh sách",
+    "action": "Hành động",
+    "view": "Xem",
+    "gantt": "Gantt",
+    "ok": "OK"
+  },
+  "modal": {
+    "confirmation": "Xác nhận",
+    "editTitle": "Chỉnh sửa công việc",
+    "name": "Tên công việc",
+    "start": "Ngày bắt đầu",
+    "duration": "Thời lượng (ngày)"
+  },
+  "messages": {
+    "required": " là bắt buộc",
+    "invalid": " không hợp lệ",
+    "invalidDate": "Định dạng ngày không hợp lệ",
+    "maxLength": "Tối đa {max} ký tự được phép",
+    "minLength": "Tối thiểu {min} ký tự cần thiết",
+    "min": "Giá trị tối thiểu là {min}",
+    "max": "Giá trị tối đa là {max}",
+    "number": "Phải là một số hợp lệ",
+    "email": "Phải là địa chỉ email hợp lệ",
+    "codeValidatorError": "Mã chỉ được chứa chữ cái, số, dấu gạch ngang và dấu gạch dưới",
+    "endDateAfterStart": "Ngày kết thúc phải sau ngày bắt đầu",
+    "endDateBeforeStart": "Ngày bắt đầu phải trước ngày kết thúc",
+    "dateOutOfRange": "Ngày phải nằm trong phạm vi ngày của dự án",
+    "commonError": "Đã xảy ra lỗi. Vui lòng thử lại.",
+    "INVALID_EMAIL_FORMAT": "Email không hợp lệ.",
+    "INVALID_STRING_TYPE": "Kiểu chuỗi không hợp lệ.",
+    "INVALID_NUMBER_TYPE": "Kiểu số không hợp lệ.",
+    "FIELD_REQUIRED": "Trường bắt buộc.",
+    "INVALID_UUID_FORMAT": "Định dạng UUID không hợp lệ.",
+    "INVALID_ENUM_VALUE": "Giá trị không hợp lệ.",
+    "VALUE_TOO_SMALL": "Giá trị tối thiểu là {min}.",
+    "VALUE_TOO_LARGE": "Giá trị tối đa là {max}.",
+    "STRING_TOO_SHORT": "Tối thiểu {min} ký tự.",
+    "STRING_TOO_LONG": "Tối đa {max} ký tự.",
+    "INVALID_BOOLEAN_TYPE": "Kiểu boolean không hợp lệ.",
+    "INVALID_ARRAY_TYPE": "Kiểu mảng không hợp lệ.",
+    "INVALID_OBJECT_TYPE": "Kiểu đối tượng không hợp lệ.",
+    "BUSINESS_LOGIC_ERROR": "Lỗi logic nghiệp vụ.",
+    "EMPTY_OBJECT": "Đối tượng rỗng.",
+    "INVALID_DATE_FORMAT": "Định dạng ngày không hợp lệ.",
+    "VALIDATION_ERROR": "Lỗi xác thực dữ liệu.",
+    "FIELD_ALREADY_EXISTS": "Trường đã tồn tại."
+  },
+  "groups": {
+    "basic": "Thông tin cơ bản",
+    "details": "Chi tiết",
+    "dates": "Ngày",
+    "assignment": "Phân công",
+    "advanced": "Nâng cao",
+    "custom": "Tùy chỉnh"
+  },
+  "gantt": {
+    "export": "Xuất",
+    "tasks": "Công việc",
+    "addTask": "Thêm công việc",
+    "viewMode": {
+      "placeholder": "Chế độ xem",
+      "days": "Ngày",
+      "weeks": "Tuần",
+      "months": "Tháng"
+    },
+    "viewType": {
+      "label": "Kiểu hiển thị",
+      "flat": "Hiển thị phẳng",
+      "tree": "Hiển thị cây"
+    },
+    "filters": {
+      "time": {
+        "previous": "Trước",
+        "next": "Sau",
+        "today": "Hôm nay",
+        "resetToProject": "Reset to Project"
+      },
+      "type": {
+        "placeholder": "Loại",
+        "all": "Tất cả loại",
+        "task": "Công việc",
+        "milestone": "Cột mốc",
+        "project": "Dự án"
+      },
+      "status": {
+        "placeholder": "Trạng thái",
+        "all": "Tất cả trạng thái",
+        "new": "Mới",
+        "inProgress": "Đang thực hiện",
+        "completed": "Hoàn thành",
+        "cancelled": "Đã hủy",
+        "onHold": "Tạm dừng"
+      },
+      "priority": {
+        "placeholder": "Ưu tiên",
+        "all": "Tất cả ưu tiên",
+        "low": "Thấp",
+        "normal": "Bình thường",
+        "high": "Cao",
+        "urgent": "Khẩn cấp"
+      },
+      "assignee": {
+        "placeholder": "Người phụ trách",
+        "all": "Tất cả người phụ trách"
+      },
+      "search": {
+        "placeholder": "Tìm kiếm dự án...",
+        "byName": "Tìm theo tên"
+      },
+      "dateRange": {
+        "startFrom": "Ngày bắt đầu từ",
+        "endTo": "Ngày kết thúc đến",
+        "actualStartFrom": "Ngày bắt đầu thực tế từ",
+        "actualEndTo": "Ngày kết thúc thực tế đến"
+      }
+    },
+    "messages": {
+      "selectProject": "Chọn một dự án để tải công việc.",
+      "loadingTasks": "Đang tải công việc...",
+      "noTasks": "Không tìm thấy công việc nào. Tạo công việc đầu tiên để bắt đầu.",
+      "pleaseChooseProject": "Vui lòng chọn dự án trước khi sử dụng Gantt"
+    }
+  },
+  "parentTaskModal": {
+    "title": "Cập nhật công việc cha",
+    "description": "Bạn sắp thay đổi {{updateType}} của \"{{taskName}}\" có công việc con.",
+    "question": "Bạn muốn xử lý các công việc con như thế nào?",
+    "updateType": {
+      "duration": "thời lượng",
+      "dates": "ngày bắt đầu/kết thúc"
+    },
+    "options": {
+      "updateAll": {
+        "title": "Cập nhật công việc cha và tất cả công việc con",
+        "description": "Điều chỉnh {{updateType}} của công việc con để giữ quan hệ"
+      },
+      "updateParentOnly": {
+        "title": "Chỉ cập nhật công việc cha",
+        "description": "Giữ nguyên các công việc con"
+      }
+    }
+  },
+  "assignee": {
+    "none": "Chưa phân công"
+  },
+  "header": {
+    "viewMode": "Chế độ xem",
+    "day": "Ngày",
+    "month": "Tháng",
+    "year": "Năm",
+    "week": "Tuần"
+  },
+  "tree": {
+    "addChild": "Thêm công việc con",
+    "addSibling": "Thêm công việc cùng cấp",
+    "delete": "Xóa công việc",
+    "moveUp": "Di chuyển lên",
+    "moveDown": "Di chuyển xuống",
+    "indent": "Thụt vào",
+    "outdent": "Thụt ra"
+  },
+  "common": {
+    "actions": {
+      "create": "Tạo công việc",
+      "createChild": "Tạo công việc con",
+      "edit": "Chỉnh sửa công việc",
+      "delete": "Xóa công việc",
+      "complete": "Hoàn thành công việc",
+      "reopen": "Mở lại công việc"
+    },
+    "group": {
+      "basic": "Thông tin cơ bản",
+      "schedule": "Lịch trình",
+      "people": "Người",
+      "extra": "Extra"
+    },
+    "form": {
+      "title": {
+        "create": "Tạo Công Việc",
+        "edit": "Cập Nhật Công Việc"
+      },
+      "taskName": "Tên Công Việc",
+      "description": "Mô Tả",
+      "startDate": {
+        "label": "Ngày Bắt Đầu"
+      },
+      "endDate": {
+        "label": "Ngày Kết Thúc"
+      },
+      "progress": {
+        "label": "Tiến Độ"
+      },
+      "assignee": {
+        "label": "Người Phụ Trách"
+      },
+      "manager": {
+        "label": "Quản Lý"
+      },
+      "placeholders": {
+        "taskName": "Nhập tên công việc",
+        "description": "Thêm mô tả",
+        "unassigned": "Chưa phân công",
+        "selectDate": "mm/dd/yyyy",
+        "enterNumber": "Nhập số",
+        "enterEmail": "Nhập email",
+        "enterPhone": "Nhập số điện thoại",
+        "enterWebsite": "Nhập URL website",
+        "enterText": "Nhập văn bản"
+      },
+      "tooltips": {
+        "removeField": "Xóa trường"
+      },
+      "sections": {
+        "people": "NGƯỜI THỰC HIỆN"
+      },
+      "projectId": {
+        "label": "ID Dự Án",
+        "placeholder": "Nhập ID dự án"
+      },
+      "externalId": {
+        "label": "ID Ngoài",
+        "placeholder": "Nhập ID ngoài"
+      },
+      "name": {
+        "label": "Tên Công Việc",
+        "placeholder": "Nhập tên công việc"
+      },
+      "startDate": {
+        "label": "Ngày Bắt Đầu",
+        "placeholder": "Chọn ngày bắt đầu"
+      },
+      "endDate": {
+        "label": "Ngày Kết Thúc",
+        "placeholder": "Chọn ngày kết thúc"
+      },
+      "status": {
+        "label": "Trạng Thái"
+      },
+      "priority": {
+        "label": "Ưu Tiên"
+      },
+      "type": {
+        "label": "Loại"
+      },
+      "level": {
+        "label": "Cấp Độ",
+        "placeholder": "Nhập cấp độ"
+      },
+      "category": {
+        "label": "Danh Mục",
+        "placeholder": "Nhập danh mục"
+      },
+      "assignee": {
+        "label": "Người Phụ Trách",
+        "placeholder": "Chọn người phụ trách"
+      },
+      "manager": {
+        "label": "Quản Lý",
+        "placeholder": "Chọn quản lý"
+      },
+      "parentId": {
+        "label": "Công Việc Cha",
+        "placeholder": "Chọn công việc cha"
+      },
+      "dependencies": {
+        "label": "Phụ Thuộc",
+        "placeholder": "Chọn công việc phụ thuộc"
+      },
+      "progress": {
+        "label": "Tiến Độ",
+        "placeholder": "Nhập phần trăm tiến độ"
+      },
+      "customFields": {
+        "label": "Trường Tùy Chỉnh"
+      },
+      "tags": {
+        "label": "Thẻ",
+        "placeholder": "Nhập thẻ"
+      }
+    },
+    "validation": {
+      "startDateBeforeProject": "Ngày bắt đầu công việc không thể trước ngày bắt đầu dự án",
+      "endDateBeforeStart": "Ngày kết thúc công việc không thể trước ngày bắt đầu"
+    },
+    "notification": {
+      "create": "Tạo công việc thành công",
+      "update": "Cập nhật công việc thành công",
+      "delete": "Xóa công việc thành công",
+      "updateFailed": "Cập nhật công việc thất bại - đã hoàn tác thay đổi",
+      "deleteFailed": "Xóa công việc thất bại - đã hoàn tác thay đổi",
+      "createFailed": "Tạo công việc thất bại - đã hoàn tác thay đổi"
+    },
+    "confirmation": {
+      "create": "Bạn có chắc muốn tạo công việc này?",
+      "update": "Bạn có chắc muốn cập nhật công việc này?",
+      "delete": "Bạn có chắc muốn xóa công việc này?"
+    },
+    "customFields": {
+      "title": "TRƯỜNG TÙY CHỈNH",
+      "createNewField": "Tạo trường mới",
+      "noFields": "Chưa có trường tùy chỉnh nào được thêm.",
+      "hideEmptyFields": "Ẩn trường trống",
+      "loadingTypes": "Đang tải loại trường...",
+      "selectType": "Chọn loại trường",
+      "remove": "Xóa trường",
+      "enterValue": "Nhập giá trị",
+      "enterLabel": "Nhập nhãn",
+      "selectDate": "Chọn ngày",
+      "selectOption": "Chọn tùy chọn",
+      "checkboxLabel": "Hộp kiểm",
+      "modal": {
+        "title": "Tạo trường",
+        "fieldName": {
+          "label": "Tên trường",
+          "placeholder": "1"
+        },
+        "description": {
+          "label": "Mô tả (tùy chọn)",
+          "placeholder": "",
+          "help": "Xem mô tả khi di chuột qua các trường trong công việc hoặc chế độ xem"
+        },
+        "type": {
+          "label": "Loại",
+          "placeholder": "Chọn loại trường"
+        },
+        "actions": {
+          "cancel": "Hủy",
+          "create": "Tạo"
+        }
+      }
+    },
+    "status": {
+      "new": "CẦN LÀM",
+      "in_progress": "ĐANG LÀM",
+      "completed": "HOÀN THÀNH",
+      "on_hold": "TẠM DỪNG"
+    },
+    "priority": {
+      "low": "Ưu tiên thấp",
+      "normal": "Ưu tiên bình thường",
+      "high": "Ưu tiên cao",
+      "urgent": "Ưu tiên khẩn cấp"
+    }
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "name": "@wms/qc",
+  "version": "0.1.0",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "sideEffects": false,
+  "scripts": {
+    "build": "vite build",
+    "lint": "eslint .",
+    "dev": "vite dev --logLevel silent",
+    "peers:install": "yarn dlx install-peers-cli || true"
+  },
+  "peerDependencies": {
+    "@tanstack/react-query": "^5.90.2",
+    "react": "18.2.0",
+    "react-dom": "18.2.0"
+  },
+  "devDependencies": {
+    "@wms/build-config": "workspace:*",
+    "@wms/eslint-config": "workspace:*",
+    "@wms/typescript-config": "workspace:*",
+    "vite": "^7.1.7"
+  }
+}

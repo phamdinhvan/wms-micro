@@ -1,0 +1,655 @@
+{
+  "language": "en",
+  "project": {
+    "title": "Project",
+    "selectPlaceholder": "Select a project",
+    "noProjects": "No projects",
+    "create": "Create project",
+    "actions": {
+      "create": "Create Project",
+      "edit": "Edit Project",
+      "delete": "Delete Project",
+      "archive": "Archive Project",
+      "restore": "Restore Project"
+    },
+    "group": {
+      "basic": "Basic Information",
+      "schedule": "Schedule",
+      "people": "People",
+      "extra": "Extra"
+    },
+    "table": {
+      "noData": "No data",
+      "loading": "Loading...",
+      "name": "Name",
+      "code": "Code",
+      "status": "Status",
+      "priority": "Priority",
+      "startDate": "Start Date",
+      "endDate": "End Date",
+      "budget": "Budget",
+      "templateId": "Template ID",
+      "progress": "Progress",
+      "actualCost": "Actual Cost",
+      "application": "Application",
+      "manager": "Manager",
+      "customFields": "Custom Fields",
+      "description": "Description",
+      "actualStartDate": "Actual Start Date",
+      "actualEndDate": "Actual End Date",
+      "assignee": "Assignee",
+      "actualDateRange": "Actual Period",
+      "dateRange": "Planned Period"
+    },
+    "detail": {
+      "information": "Project Information",
+      "additionalInfo": "Additional Information",
+      "id": "Project ID",
+      "externalId": "External ID",
+      "actualStartDate": "Actual Start Date",
+      "actualEndDate": "Actual End Date",
+      "assignee": "Assignee",
+      "contextKey": "Context Key",
+      "templateId": "Template ID",
+      "createdAt": "Created At",
+      "updatedAt": "Updated At",
+      "appId": "App ID",
+      "duration": "Duration",
+      "elapsed": "Elapsed",
+      "details": "Details",
+      "delay": "Delay",
+      "progress": "Progress"
+    },
+    "untitled": "Untitled Project",
+    "notFound": "Project not found",
+    "loadError": "Error loading project",
+    "noDescription": "No description provided",
+    "status": {
+      "active": "Active",
+      "on-hold": "On Hold",
+      "archived": "Archived",
+      "completed": "Completed",
+      "inactive": "Inactive"
+    },
+    "form": {
+      "externalId": {
+        "label": "External ID",
+        "placeholder": "Enter external ID"
+      },
+      "name": {
+        "label": "Name",
+        "placeholder": "Enter project name"
+      },
+      "code": {
+        "label": "Code",
+        "placeholder": "Enter project code"
+      },
+      "key": {
+        "label": "Key",
+        "placeholder": "Enter project key"
+      },
+      "type": {
+        "label": "Project Type",
+        "placeholder": "Select project type",
+        "main": "Main Project",
+        "sub": "Sub Project"
+      },
+      "description": {
+        "label": "Description",
+        "placeholder": "Enter project description"
+      },
+      "assignee": {
+        "label": "Assignee",
+        "placeholder": "Select assignee"
+      },
+      "collaborators": {
+        "label": "Collaborators",
+        "placeholder": "Select collaborators"
+      },
+      "startDate": {
+        "label": "Start Date"
+      },
+      "endDate": {
+        "label": "End Date"
+      },
+      "actualStartDate": {
+        "label": "Actual Start Date"
+      },
+      "actualEndDate": {
+        "label": "Actual End Date"
+      },
+      "status": {
+        "label": "Status"
+      },
+      "budget": {
+        "label": "Budget",
+        "placeholder": "Enter budget"
+      },
+      "templateId": {
+        "label": "Template ID",
+        "placeholder": "Enter template ID"
+      },
+      "progress": {
+        "label": "Progress",
+        "placeholder": "Enter progress percentage"
+      },
+      "actualCost": {
+        "label": "Actual Cost",
+        "placeholder": "Enter actual cost"
+      },
+      "application": {
+        "label": "Application",
+        "placeholder": "Enter application details"
+      },
+      "manager": {
+        "label": "Manager",
+        "placeholder": "Select manager"
+      },
+      "customFields": {
+        "label": "Custom Fields"
+      },
+      "attributes": {
+        "label": "Attributes (JSON)",
+        "placeholder": "Enter attributes as JSON"
+      }
+    },
+    "edit": "Edit Project",
+    "update": "Update Project",
+    "notification": {
+      "createSuccess": "Project created successfully.",
+      "createError": "Create failed.",
+      "updateSuccess": "Project updated successfully",
+      "updateError": "Update failed.",
+      "deleteSuccess": "Project deleted successfully.",
+      "deleteError": "Delete failed."
+    },
+    "confirmation": {
+      "create": "Are you sure you want to create this project?",
+      "update": "Are you sure you want to update this project?",
+      "delete": "Are you sure you want to delete this project?"
+    },
+    "validation": {
+      "nameRequired": "Name is required",
+      "descriptionRequired": "Description is required",
+      "keyRequired": "Key is required",
+      "startDateRequired": "Start date is required",
+      "endDateRequired": "End date is required",
+      "statusRequired": "Status is required",
+      "invalidDate": "Invalid date",
+      "endDateAfterStart": "End date must be after start date",
+      "actualEndDateAfterActualStart": "Actual end date must be after actual start date"
+    }
+  },
+  "task": {
+    "title": "Task",
+    "actions": {
+      "create": "Create Task",
+      "createChild": "Create Subtask",
+      "edit": "Edit Task",
+      "delete": "Delete Task",
+      "complete": "Complete Task",
+      "reopen": "Reopen Task"
+    },
+    "group": {
+      "basic": "Basic Information",
+      "schedule": "Schedule",
+      "people": "People",
+      "extra": "Extra"
+    },
+    "form": {
+      "title": {
+        "create": "Create Task",
+        "edit": "Update Task"
+      },
+      "taskName": "Task Name",
+      "description": {
+        "label": "Description",
+        "placeholder": "Enter description"
+      },
+      "startDate": {
+        "label": "Start Date"
+      },
+      "endDate": {
+        "label": "End Date"
+      },
+      "progress": {
+        "label": "Progress"
+      },
+      "assignee": {
+        "label": "Assignee"
+      },
+      "manager": {
+        "label": "Manager"
+      },
+      "placeholders": {
+        "taskName": "Enter task name",
+        "description": "Add description",
+        "unassigned": "Unassigned",
+        "selectDate": "mm/dd/yyyy",
+        "enterNumber": "Enter number",
+        "enterEmail": "Enter email",
+        "enterPhone": "Enter phone number",
+        "enterWebsite": "Enter website URL",
+        "enterText": "Enter text"
+      },
+      "tooltips": {
+        "removeField": "Remove field"
+      },
+      "sections": {
+        "people": "PEOPLE"
+      },
+      "projectId": {
+        "label": "Project ID",
+        "placeholder": "Enter project ID"
+      },
+      "externalId": {
+        "label": "External ID",
+        "placeholder": "Enter external ID"
+      },
+      "name": {
+        "label": "Task Name",
+        "placeholder": "Enter task name"
+      },
+      "startDate": {
+        "label": "Start Date",
+        "placeholder": "Select start date"
+      },
+      "endDate": {
+        "label": "End Date",
+        "placeholder": "Select end date"
+      },
+      "status": {
+        "label": "Status"
+      },
+      "priority": {
+        "label": "Priority"
+      },
+      "attribute": "Attributes",
+      "type": {
+        "label": "Type"
+      },
+      "level": {
+        "label": "Level",
+        "placeholder": "Enter level"
+      },
+      "category": {
+        "label": "Category",
+        "placeholder": "Enter category"
+      },
+      "notes": {
+        "label": "Notes",
+        "placeholder": "Enter notes"
+      },
+      "assignee": {
+        "label": "Assignee",
+        "placeholder": "Select assignee"
+      },
+      "manager": {
+        "label": "Manager",
+        "placeholder": "Select manager"
+      },
+      "parentId": {
+        "label": "Parent Task",
+        "placeholder": "Select parent task"
+      },
+      "dependencies": {
+        "label": "Dependencies",
+        "placeholder": "Select dependent tasks"
+      },
+      "progress": {
+        "label": "Progress",
+        "placeholder": "Enter progress percentage"
+      },
+      "customFields": {
+        "label": "Custom Fields"
+      },
+      "tags": {
+        "label": "Tags",
+        "placeholder": "Enter tags"
+      },
+      "externalFields": "External Fields"
+    },
+    "validation": {
+      "startDateBeforeProject": "Task start date cannot be before project start date",
+      "endDateBeforeStart": "Task end date cannot be before start date"
+    },
+    "notification": {
+      "create": "Task created successfully",
+      "update": "Task updated successfully",
+      "delete": "Task deleted successfully",
+      "updateFailed": "Failed to update task - changes reverted",
+      "deleteFailed": "Failed to delete task - changes reverted",
+      "createFailed": "Failed to create task - changes reverted"
+    },
+    "confirmation": {
+      "create": "Are you sure you want to create this task?",
+      "update": "Are you sure you want to update this task?",
+      "delete": "Are you sure you want to delete this task?"
+    },
+    "tabs": {
+      "details": "Details",
+      "dependencies": "Dependencies"
+    },
+    "dependencies": {
+      "title": "Task Dependencies",
+      "add": "Add Dependency",
+      "empty": "No dependencies configured",
+      "targetTask": "Target Task",
+      "relationType": "Relation Type",
+      "delayDays": "Delay (Days)",
+      "selectTask": "Select a task",
+      "selectRelationType": "Select relation type",
+      "description": "Dependencies define the relationships between tasks. For example, a Finish-to-Start (FS) dependency means the target task cannot start until this task finishes.",
+      "relationTypes": {
+        "FS": "Finish-to-Start (FS)",
+        "SS": "Start-to-Start (SS)",
+        "FF": "Finish-to-Finish (FF)",
+        "SF": "Start-to-Finish (SF)",
+        "FSDescription": "Target task starts after this task finishes",
+        "SSDescription": "Target task starts when this task starts",
+        "FFDescription": "Target task finishes when this task finishes",
+        "SFDescription": "Target task finishes after this task starts"
+      },
+      "dragDrop": {
+        "dragging": "Drag to connect tasks",
+        "dropToConnect": "Drop on target task node to create relation",
+        "duplicateRelation": "A relation already exists between these tasks",
+        "selfRelation": "Cannot create relation from task to itself",
+        "relationCreated": "Task relation created successfully",
+        "relationFailed": "Failed to create task relation"
+      }
+    },
+    "relations": {
+      "validation": {
+        "targetTaskRequired": "Target task is required",
+        "relationTypeRequired": "Relation type is required",
+        "invalidRelationType": "Invalid relation type"
+      }
+    },
+    "customFields": {
+      "title": "CUSTOM FIELDS",
+      "createNewField": "Create new field",
+      "noFields": "No custom fields added yet.",
+      "hideEmptyFields": "Hide empty fields",
+      "loadingTypes": "Loading field types...",
+      "selectType": "Select field type",
+      "remove": "Remove field",
+      "enterValue": "Enter value",
+      "enterLabel": "Enter label",
+      "selectDate": "Select date",
+      "selectOption": "Select option",
+      "checkboxLabel": "Checkbox",
+      "modal": {
+        "title": "Create field",
+        "fieldName": {
+          "label": "Field name",
+          "placeholder": "1"
+        },
+        "description": {
+          "label": "Description (optional)",
+          "placeholder": "",
+          "help": "View descriptions when hovering over fields in tasks or views"
+        },
+        "type": {
+          "label": "Type",
+          "placeholder": "Select field type"
+        },
+        "actions": {
+          "cancel": "Cancel",
+          "create": "Create"
+        }
+      }
+    },
+    "status": {
+      "new": "TO DO",
+      "in_progress": "IN PROGRESS",
+      "completed": "COMPLETED",
+      "on_hold": "ON HOLD"
+    },
+    "priority": {
+      "low": "Low priority",
+      "normal": "Normal priority",
+      "medium": "Medium priority",
+      "high": "High priority",
+      "urgent": "Urgent priority"
+    }
+  },
+  "modal": {
+    "confirmation": "Confirmation"
+  },
+  "button": {
+    "save": "Save",
+    "create": "Create",
+    "cancel": "Cancel"
+  },
+  "common": {
+    "lang": "en",
+    "required": "*",
+    "today": "Today",
+    "characters": "Characters",
+    "loading": "Loading...",
+    "refresh": "Refresh",
+    "cancel": "Cancel",
+    "days": "days",
+    "status": {
+      "active": "Active",
+      "archived": "Archived",
+      "on-hold": "On Hold",
+      "new": "New",
+      "in_progress": "In Progress",
+      "completed": "Completed",
+      "cancelled": "Cancelled",
+      "on_hold": "On Hold",
+      "select": "Select Status"
+    },
+    "priority": {
+      "low": "Low",
+      "medium": "Medium",
+      "normal": "Normal",
+      "high": "High",
+      "urgent": "Urgent"
+    },
+    "type": {
+      "task": "Task",
+      "milestone": "Milestone",
+      "epic": "Epic",
+      "story": "Story",
+      "bug": "Bug",
+      "feature": "Feature"
+    },
+    "assignee": {
+      "none": "Unassigned",
+      "placeholder": "Select assignee"
+    }
+  },
+  "button": {
+    "create": "Create",
+    "save": "Save",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "edit": "Edit",
+    "add": "Add",
+    "remove": "Remove",
+    "confirm": "Confirm",
+    "close": "Close",
+    "back": "Back",
+    "action": "Action",
+    "view": "View",
+    "gantt": "Gantt",
+    "ok": "OK",
+    "backToList": "Back to List"
+  },
+  "pagination": {
+    "previous": "Previous",
+    "next": "Next",
+    "total": "Items",
+    "itemsPerPage": "Items per page",
+    "showing": "Showing {{from}}-{{to}} of {{total}} items"
+  },
+  "noData": "No matching data found",
+  "modal": {
+    "confirmation": "Confirmation",
+    "editTitle": "Edit task",
+    "name": "Task name",
+    "start": "Start date",
+    "duration": "Duration (days)"
+  },
+  "messages": {
+    "required": " is required",
+    "invalid": " is invalid",
+    "invalidDate": "Invalid date format",
+    "maxLength": "Maximum {max} characters allowed",
+    "minLength": "Minimum {min} characters required",
+    "min": "Minimum value is {min}",
+    "max": "Maximum value is {max}",
+    "number": "Must be a valid number",
+    "email": "Must be a valid email address",
+    "codeValidatorError": "Code can only contain letters, numbers, hyphens and underscores",
+    "endDateAfterStart": "End date must be after start date",
+    "endDateBeforeStart": "End date must be after start date",
+    "dateOutOfRange": "Date must be within project date range",
+    "commonError": "An error occurred. Please try again.",
+    "INVALID_EMAIL_FORMAT": "Invalid email format.",
+    "INVALID_STRING_TYPE": "Invalid string type.",
+    "INVALID_NUMBER_TYPE": "Invalid number type.",
+    "FIELD_REQUIRED": "Required field.",
+    "INVALID_UUID_FORMAT": "Invalid UUID format.",
+    "INVALID_ENUM_VALUE": "Invalid enum value.",
+    "VALUE_TOO_SMALL": "Minimum value is {min}.",
+    "VALUE_TOO_LARGE": "Maximum value is {max}.",
+    "STRING_TOO_SHORT": "Minimum {min} characters required.",
+    "STRING_TOO_LONG": "Maximum {max} characters allowed.",
+    "INVALID_BOOLEAN_TYPE": "Invalid boolean type.",
+    "INVALID_ARRAY_TYPE": "Invalid array type.",
+    "INVALID_OBJECT_TYPE": "Invalid object type.",
+    "BUSINESS_LOGIC_ERROR": "Business logic error occurred.",
+    "EMPTY_OBJECT": "Empty object.",
+    "INVALID_DATE_FORMAT": "Invalid date format.",
+    "VALIDATION_ERROR": "Validation error.",
+    "FIELD_ALREADY_EXISTS": "Field already exists."
+  },
+  "groups": {
+    "basic": "Basic Information",
+    "details": "Details",
+    "dates": "Dates",
+    "assignment": "Assignment",
+    "advanced": "Advanced",
+    "custom": "Custom"
+  },
+  "gantt": {
+    "export": "Export Excel",
+    "tasks": "Tasks",
+    "addTask": "Add Task",
+    "viewMode": {
+      "placeholder": "View",
+      "days": "Days",
+      "weeks": "Weeks",
+      "months": "Months"
+    },
+    "viewType": {
+      "label": "View Type",
+      "flat": "Flat View",
+      "tree": "Tree View"
+    },
+    "filters": {
+      "time": {
+        "previous": "Previous",
+        "next": "Next",
+        "today": "Today",
+        "resetToProject": "Reset to Project"
+      },
+      "type": {
+        "placeholder": "Type",
+        "all": "All Types",
+        "task": "Task",
+        "milestone": "Milestone",
+        "project": "Project"
+      },
+      "status": {
+        "placeholder": "Status",
+        "all": "All Status",
+        "new": "New",
+        "inProgress": "In Progress",
+        "completed": "Completed",
+        "cancelled": "Cancelled",
+        "onHold": "On Hold"
+      },
+      "priority": {
+        "placeholder": "Priority",
+        "all": "All Priority",
+        "low": "Low",
+        "normal": "Normal",
+        "high": "High",
+        "urgent": "Urgent"
+      },
+      "assignee": {
+        "placeholder": "Assignee",
+        "all": "All Assignees"
+      },
+      "search": {
+        "placeholder": "Search projects...",
+        "byName": "Search by name"
+      },
+      "dateRange": {
+        "startFrom": "Start date from",
+        "endTo": "End date to",
+        "actualStartFrom": "Actual start from",
+        "actualEndTo": "Actual end to"
+      }
+    },
+    "messages": {
+      "selectProject": "Select a project to load tasks.",
+      "loadingTasks": "Loading tasks...",
+      "noTasks": "No tasks found. Create your first task to get started.",
+      "pleaseChooseProject": "Please choose a project before using Gantt"
+    }
+  },
+  "parentTaskModal": {
+    "title": "Update Parent Task",
+    "description": "You are about to change the {{updateType}} of \"{{taskName}}\" which has child tasks.",
+    "question": "How would you like to handle the child tasks?",
+    "updateType": {
+      "duration": "duration",
+      "dates": "start/end dates"
+    },
+    "options": {
+      "updateAll": {
+        "title": "Update parent and all children",
+        "description": "Adjust child task {{updateType}} to maintain relationships"
+      },
+      "updateParentOnly": {
+        "title": "Update only parent task",
+        "description": "Keep child tasks unchanged"
+      }
+    }
+  },
+  "assignee": {
+    "none": "Unassigned"
+  },
+  "header": {
+    "viewMode": "View Mode",
+    "day": "Day",
+    "month": "Month",
+    "year": "Year",
+    "week": "Week"
+  },
+  "tree": {
+    "addChild": "Add subtask",
+    "collapse": "Collapse",
+    "expand": "Expand"
+  },
+  "controls": {
+    "showFilters": "Show filters",
+    "hideFilters": "Hide filters",
+    "expandTree": "Expand tree panel",
+    "minimizeTree": "Minimize tree panel (scroll only)",
+    "showMountainChart": "Show mountain chart",
+    "mountainChart": "Mountain chart",
+    "mountainChartDescription": "Workload visualization"
+  },
+  "tooltip": {
+    "resizeLeft": "Resize left",
+    "resizeRight": "Resize right",
+    "move": "Move"
+  }
+}

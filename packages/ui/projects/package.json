@@ -1,0 +1,39 @@
+{
+  "name": "@wms/projects",
+  "version": "0.1.0",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "vite build",
+    "test": "vitest",
+    "lint": "eslint .",
+    "dev": "vite"
+  },
+  "peerDependencies": {
+    "@wms/core": "workspace:*"
+  },
+  "devDependencies": {
+    "@types/react": "19.1.0",
+    "@types/react-dom": "19.1.1",
+    "@wms/build-config": "workspace:*",
+    "@wms/eslint-config": "workspace:*",
+    "@wms/typescript-config": "workspace:*",
+    "eslint": "^9",
+    "tsup": "^8",
+    "typescript": "^5",
+    "vite": "^7.1.7",
+    "vite-plugin-dts": "^4.5.4"
+  }
+}

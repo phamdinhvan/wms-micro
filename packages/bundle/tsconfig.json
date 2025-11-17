@@ -1,0 +1,4 @@
+{
+  "extends": "@wms/typescript-config/react-library.json",
+  "include": ["src", "vite-env.d.ts"]
+}

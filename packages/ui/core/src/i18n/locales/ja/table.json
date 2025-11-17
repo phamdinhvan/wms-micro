@@ -1,0 +1,7 @@
+{
+  "pagination": {
+    "showing": "{{from}}件〜{{to}}件 / 全{{total}}件",
+    "itemsPerPage": "表示件数"
+  },
+  "viewOptions": "テーブル表示"
+}

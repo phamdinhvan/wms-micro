@@ -1,0 +1,6 @@
+{
+  "pagination": {
+    "showing": "Showing {{from}} to {{to}} of {{total}} entries",
+    "itemsPerPage": "Items per page"
+  }
+}

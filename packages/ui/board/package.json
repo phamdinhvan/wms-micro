@@ -1,0 +1,41 @@
+{
+  "name": "@wms/board",
+  "version": "0.1.0",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "sideEffects": [
+    "*.css"
+  ],
+  "scripts": {
+    "build": "vite build",
+    "test": "vitest",
+    "lint": "eslint .",
+    "dev": "vite",
+    "peers:install": "yarn dlx install-peers-cli || true"
+  },
+  "peerDependencies": {
+    "@wms/core": "workspace:^"
+  },
+  "devDependencies": {
+    "@wms/build-config": "workspace:*",
+    "@wms/eslint-config": "workspace:*",
+    "@wms/typescript-config": "workspace:*",
+    "vite": "^7.1.7"
+  },
+  "dependencies": {
+    "@hello-pangea/dnd": "^18.0.1",
+    "react-virtuoso": "^4.14.1"
+  }
+}

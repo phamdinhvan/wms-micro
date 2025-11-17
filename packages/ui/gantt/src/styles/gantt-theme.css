@@ -1,0 +1,198 @@
+/* Gantt Chart Theme CSS Variables */
+/* This file demonstrates how to use the theme variables in your styles */
+
+/* Root container with theme variables */
+.gantt-container {
+  /* Colors are automatically applied via CSS custom properties */
+  font-family: var(--gantt-font-family, system-ui, -apple-system, sans-serif);
+  font-size: var(--gantt-font-size-md, 1rem);
+  color: var(--gantt-color-text, #111827);
+  background-color: var(--gantt-color-background, #ffffff);
+}
+
+/* Toolbar styling with theme variables */
+.gantt-toolbar {
+  background-color: var(--gantt-color-surface, #f9fafb);
+  border-bottom: var(--gantt-border-width-thin, 1px) solid var(--gantt-color-border, #e5e7eb);
+  padding: var(--gantt-spacing-sm, 0.5rem) var(--gantt-spacing-md, 1rem);
+}
+
+/* Task bar styling */
+.gantt-task-bar {
+  background-color: var(--gantt-color-task-bar, #3b82f6);
+  border-radius: var(--gantt-border-radius-sm, 0.25rem);
+  transition: all 0.2s ease;
+}
+
+.gantt-task-bar:hover {
+  background-color: var(--gantt-color-task-bar-hover, #2563eb);
+  box-shadow: var(--gantt-shadow-sm, 0 1px 2px 0 rgb(0 0 0 / 0.05));
+}
+
+.gantt-task-bar.selected {
+  background-color: var(--gantt-color-task-bar-selected, #1d4ed8);
+  box-shadow: var(--gantt-shadow-md, 0 4px 6px -1px rgb(0 0 0 / 0.1));
+}
+
+/* Status colors */
+.gantt-status-new {
+  background-color: var(--gantt-color-status-new, #6b7280);
+}
+
+.gantt-status-in-progress {
+  background-color: var(--gantt-color-status-in-progress, #3b82f6);
+}
+
+.gantt-status-completed {
+  background-color: var(--gantt-color-status-completed, #10b981);
+}
+
+.gantt-status-cancelled {
+  background-color: var(--gantt-color-status-cancelled, #ef4444);
+}
+
+.gantt-status-on-hold {
+  background-color: var(--gantt-color-status-on-hold, #f59e0b);
+}
+
+/* Priority colors */
+.gantt-priority-low {
+  border-left: 4px solid var(--gantt-color-priority-low, #10b981);
+}
+
+.gantt-priority-normal {
+  border-left: 4px solid var(--gantt-color-priority-normal, #3b82f6);
+}
+
+.gantt-priority-high {
+  border-left: 4px solid var(--gantt-color-priority-high, #f59e0b);
+}
+
+.gantt-priority-urgent {
+  border-left: 4px solid var(--gantt-color-priority-urgent, #ef4444);
+}
+
+/* Tree panel styling */
+.gantt-tree-panel {
+  background-color: var(--gantt-color-background, #ffffff);
+  border-right: var(--gantt-border-width-thin, 1px) solid var(--gantt-color-border, #e5e7eb);
+}
+
+.gantt-tree-item {
+  padding: var(--gantt-spacing-xs, 0.25rem) var(--gantt-spacing-sm, 0.5rem);
+  border-bottom: var(--gantt-border-width-thin, 1px) solid var(--gantt-color-border-light, #f3f4f6);
+  transition: background-color 0.15s ease;
+}
+
+.gantt-tree-item:hover {
+  background-color: var(--gantt-color-hover, #f3f4f6);
+}
+
+.gantt-tree-item.selected {
+  background-color: var(--gantt-color-selected, #dbeafe);
+  border-color: var(--gantt-color-primary, #3b82f6);
+}
+
+/* Timeline header */
+.gantt-timeline-header {
+  background-color: var(--gantt-color-timeline-header, #f9fafb);
+  border-bottom: var(--gantt-border-width-thin, 1px) solid var(--gantt-color-border, #e5e7eb);
+  font-size: var(--gantt-font-size-xs, 0.75rem);
+  font-weight: var(--gantt-font-weight-semibold, 600);
+}
+
+.gantt-timeline-grid {
+  border-right: var(--gantt-border-width-thin, 1px) solid var(--gantt-color-timeline-grid, #e5e7eb);
+}
+
+.gantt-timeline-weekend {
+  background-color: var(--gantt-color-timeline-weekend, #f8d7d7);
+}
+
+.gantt-timeline-today {
+  background-color: var(--gantt-color-timeline-today, #fef3c7);
+}
+
+/* Interactive elements */
+.gantt-button {
+  background-color: var(--gantt-color-primary, #3b82f6);
+  color: var(--gantt-color-background, #ffffff);
+  border: none;
+  border-radius: var(--gantt-border-radius-md, 0.5rem);
+  padding: var(--gantt-spacing-xs, 0.25rem) var(--gantt-spacing-sm, 0.5rem);
+  font-size: var(--gantt-font-size-sm, 0.875rem);
+  font-weight: var(--gantt-font-weight-medium, 500);
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.gantt-button:hover {
+  background-color: var(--gantt-color-primary-hover, #2563eb);
+  box-shadow: var(--gantt-shadow-sm, 0 1px 2px 0 rgb(0 0 0 / 0.05));
+}
+
+.gantt-button:focus {
+  outline: 2px solid var(--gantt-color-focus, #3b82f6);
+  outline-offset: 2px;
+}
+
+/* Text styles */
+.gantt-text-primary {
+  color: var(--gantt-color-text, #111827);
+}
+
+.gantt-text-secondary {
+  color: var(--gantt-color-text-secondary, #6b7280);
+}
+
+.gantt-text-muted {
+  color: var(--gantt-color-text-muted, #9ca3af);
+}
+
+/* Spacing utilities */
+.gantt-spacing-xs { margin: var(--gantt-spacing-xs, 0.25rem); }
+.gantt-spacing-sm { margin: var(--gantt-spacing-sm, 0.5rem); }
+.gantt-spacing-md { margin: var(--gantt-spacing-md, 1rem); }
+.gantt-spacing-lg { margin: var(--gantt-spacing-lg, 1.5rem); }
+.gantt-spacing-xl { margin: var(--gantt-spacing-xl, 2rem); }
+
+/* Border radius utilities */
+.gantt-rounded-sm { border-radius: var(--gantt-border-radius-sm, 0.25rem); }
+.gantt-rounded-md { border-radius: var(--gantt-border-radius-md, 0.5rem); }
+.gantt-rounded-lg { border-radius: var(--gantt-border-radius-lg, 0.75rem); }
+
+/* Shadow utilities */
+.gantt-shadow-sm { box-shadow: var(--gantt-shadow-sm, 0 1px 2px 0 rgb(0 0 0 / 0.05)); }
+.gantt-shadow-md { box-shadow: var(--gantt-shadow-md, 0 4px 6px -1px rgb(0 0 0 / 0.1)); }
+.gantt-shadow-lg { box-shadow: var(--gantt-shadow-lg, 0 10px 15px -3px rgb(0 0 0 / 0.1)); }
+
+/* Horizontal bottom scroll styling (macOS/WebKit helpers) */
+.gantt-bottom-scroll {
+  scrollbar-width: thin; /* Firefox */
+  scrollbar-color: #888 #f1f1f1; /* Firefox */
+}
+
+.gantt-bottom-scroll::-webkit-scrollbar {
+  height: 14px; /* macOS needs slightly larger */
+  -webkit-appearance: none;
+}
+
+.gantt-bottom-scroll::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 8px;
+}
+
+.gantt-bottom-scroll::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 8px;
+  border: 2px solid #f1f1f1;
+}
+
+.gantt-bottom-scroll::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Force scrollbar to always show on macOS */
+.gantt-bottom-scroll::-webkit-scrollbar-thumb:window-inactive {
+  background: #ccc;
+}

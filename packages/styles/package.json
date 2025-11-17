@@ -1,0 +1,19 @@
+{
+  "name": "@wms/styles",
+  "version": "0.0.0",
+  "type": "module",
+  "exports": {
+    ".": "./dist/index.css",
+    "./styles.css": "./dist/index.css"
+  },
+  "sideEffects": [
+    "**/*.css"
+  ],
+  "scripts": {
+    "dev": "npx tailwindcss -c ./tailwind.config.js -i ./src/index.css -o ./dist/index.css --minify --watch",
+    "build": "npx tailwindcss -c ./tailwind.config.js -i ./src/index.css -o ./dist/index.css --minify"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.17"
+  }
+}

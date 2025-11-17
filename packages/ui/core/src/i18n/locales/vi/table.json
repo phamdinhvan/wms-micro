@@ -1,0 +1,6 @@
+{
+  "pagination": {
+    "showing": "Hiển thị {{from}} đến {{to}} trong {{total}} mục",
+    "itemsPerPage": "Mục mỗi trang"
+  }
+}

@@ -1,0 +1,61 @@
+PROJECT
+- Monorepo UI library dùng yarn + Turborepo
+- Tech stack: TypeScript, React 18, Mantine 7, Tailwind v4, tsup/rollup, Storybook 8, Vitest
+- Node >=18, module ESM + CJS
+- Theme/tokens đặt tại packages/theme
+- Tailwind config đặt tại packages/tailwind-config
+- Provider chung: @org/core/WmsProvider bọc MantineProvider + theme
+
+CONVENTIONS
+- TypeScript strict mode, ESLint + Prettier theo config root
+- Import dùng tsconfig paths (@org/*), ưu tiên import từ index
+- Không dùng default export cho component; component PascalCase, hooks useXxx, file kebab-case
+- Component phải a11y-ready: label, role, aria-* hợp lý
+- Không hard-code màu, lấy từ tokens/theme
+- Props tối giản, có default hợp lý; tránh union quá phức tạp
+- Mỗi component có test render + a11y + interaction; coverage tối thiểu 80%
+- Mỗi component có README.md + Storybook stories (CSF3)
+
+MONOREPO
+- Packages UI nằm trong ui/*
+- Shared packages: packages/theme, packages/tailwind-config, packages/tsconfig
+- Không import chéo vòng (A -> B -> A)
+- ui-* chỉ phụ thuộc shared và các ui-* cấp thấp
+- Build bằng tsup, output dist/index.js (cjs), dist/index.mjs (esm), dist/index.d.ts
+- external: react, react-dom, @mantine/*, classnames, tailwind-merge
+- Publishing: npm registry, files dist/** README.md LICENSE
+- peerDependencies: react >=18, react-dom >=18, @mantine/core ^7, @mantine/hooks ^7
+- devDependencies: tsup, typescript, @testing-library/react, vitest, storybook
+
+INSTRUCTIONS
+- Luôn tạo peerDependencies cho react, react-dom, @mantine/*; KHÔNG đưa vào dependencies
+- Mantine CSS chỉ import ở app (apps/*), không trong lib
+- Tailwind v4 chỉ cần file css, không defineConfig
+- Provider chuẩn là WmsProvider từ @org/core
+- Khi tạo component mới: kèm stories + tests + README, export từ src/index.ts
+- Không import css global từ trong package ui-*
+- Không export default component
+- Không merge nếu thiếu stories hoặc tests
+- Dùng Changesets, commit theo Conventional Commits (feat:, fix:, chore:)
+
+FILE TYPE RULES
+- ui-*/src/**/*.tsx: export named, có Component.displayName, kèm Component.stories.tsx và Component.test.tsx
+- ui-*/package.json: type module, main dist/index.cjs, module dist/index.mjs, types dist/index.d.ts, sideEffects false, peerDependencies react, react-dom, @mantine/core, @mantine/hooks
+- packages/provider/src/WmsProvider.tsx: wrap MantineProvider + <TailwindBase/>, nhận children và theme override, không import '@mantine/core/styles.css' trong lib
+- apps/**: import CSS toàn cục '@mantine/core/styles.css' + 'packages/tailwind-config/styles.css', bọc root bằng <WmsProvider>
+
+GUARDRAILS
+- KHÔNG thêm react/react-dom/@mantine/* vào dependencies của ui-*
+- KHÔNG export default component
+- KHÔNG đẩy breaking change mà không tăng major
+
+TEMPLATES
+- new ui package: src/index.ts, src/Component.tsx, src/Component.test.tsx, src/Component.stories.tsx, README.md, tsup.config.ts, package.json với peerDependencies như trên
+- component example: forwardRef<HTMLButtonElement>, className với tailwind, Component.displayName = 'Component', không default export
+
+TIPS
+- Nếu Mantine báo "MantineProvider was not found", kiểm tra app đã bọc <WmsProvider> và import '@mantine/core/styles.css' ở app root
+- Tailwind v4: chỉ cần CSS entry, không defineConfig
+- Khi gặp error Node16 ESM file extensions, chắc chắn import đuôi .js/.mjs trong dist và dùng moduleResolution nodenext
+- Tạo script scaffold 'yarn new:ui' để sinh package theo templates
+- Review checklist: build, test, story chạy, a11y kiểm tra tab/focus, bundle size ok, docs rõ ràng, changelog bằng Changesets

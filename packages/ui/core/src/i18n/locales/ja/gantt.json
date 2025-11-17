@@ -1,0 +1,655 @@
+{
+  "language": "ja",
+  "project": {
+    "title": "プロジェクト",
+    "selectPlaceholder": "プロジェクトを選択",
+    "noProjects": "プロジェクトがありません",
+    "create": "プロジェクトを作成",
+    "actions": {
+      "create": "プロジェクトを作成",
+      "edit": "プロジェクトを編集",
+      "delete": "プロジェクトを削除",
+      "archive": "プロジェクトをアーカイブ",
+      "restore": "プロジェクトを復元"
+    },
+    "group": {
+      "basic": "基本情報",
+      "schedule": "スケジュール",
+      "people": "人々",
+      "extra": "追加情報"
+    },
+    "table": {
+      "noData": "データがありません",
+      "loading": "読み込み中...",
+      "name": "名前",
+      "code": "コード",
+      "status": "ステータス",
+      "priority": "優先度",
+      "startDate": "開始日",
+      "endDate": "終了日",
+      "budget": "予算",
+      "templateId": "テンプレートID",
+      "progress": "進捗",
+      "actualCost": "実際のコスト",
+      "application": "アプリケーション",
+      "manager": "マネージャー",
+      "description": "説明",
+      "actualStartDate": "実際の開始日",
+      "actualEndDate": "実際の終了日",
+      "assignee": "担当者",
+      "actualDateRange": "実績期間",
+      "dateRange": "予定期間"
+    },
+    "detail": {
+      "information": "プロジェクト情報",
+      "additionalInfo": "追加情報",
+      "id": "プロジェクトID",
+      "externalId": "外部ID",
+      "actualStartDate": "実際の開始日",
+      "actualEndDate": "実際の終了日",
+      "assignee": "担当者",
+      "contextKey": "コンテキストキー",
+      "templateId": "テンプレートID",
+      "createdAt": "作成日",
+      "updatedAt": "更新日",
+      "appId": "アプリID",
+      "duration": "期間",
+      "elapsed": "経過",
+      "details": "詳細",
+      "delay": "遅延",
+      "progress": "進捗"
+    },
+    "untitled": "無題のプロジェクト",
+    "notFound": "プロジェクトが見つかりません",
+    "loadError": "プロジェクト詳細の読み込みに失敗しました",
+    "noDescription": "説明がありません",
+    "status": {
+      "active": "アクティブ",
+      "on-hold": "保留中",
+      "archived": "アーカイブ済み",
+      "completed": "完了",
+      "inactive": "非アクティブ"
+    },
+    "form": {
+      "appId": {
+        "label": "アプリケーションID",
+        "placeholder": "アプリケーションIDを入力"
+      },
+      "name": {
+        "label": "プロジェクト名称",
+        "placeholder": "プロジェクト名称を入力"
+      },
+      "externalId": {
+        "label": "外部ID",
+        "placeholder": "外部IDを入力"
+      },
+      "code": {
+        "label": "プロジェクトコード",
+        "placeholder": "プロジェクトコードを入力"
+      },
+      "description": {
+        "label": "説明",
+        "placeholder": "説明を入力"
+      },
+      "assignee": {
+        "label": "担当者",
+        "placeholder": "担当者を選択"
+      },
+      "collaborators": {
+        "label": "協力者",
+        "placeholder": "協力者を選択"
+      },
+      "status": {
+        "label": "ステータス"
+      },
+      "priority": {
+        "label": "優先度"
+      },
+      "startDate": {
+        "label": "プロジェクト開始（計画）",
+        "placeholder": "プロジェクト開始（計画）を選択"
+      },
+      "endDate": {
+        "label": "プロジェクト終了（計画）",
+        "placeholder": "プロジェクト終了（計画）を選択"
+      },
+      "actualStartDate": {
+        "label": "プロジェクト開始（実績）",
+        "placeholder": "プロジェクト開始（実績）を選択"
+      },
+      "actualEndDate": {
+        "label": "プロジェクト終了（実績）",
+        "placeholder": "プロジェクト終了（実績）を選択"
+      },
+      "budget": {
+        "label": "予算",
+        "placeholder": "予算を入力"
+      },
+      "templateId": {
+        "label": "テンプレートID",
+        "placeholder": "テンプレートIDを入力"
+      },
+      "progress": {
+        "label": "進捗",
+        "placeholder": "進捗率を入力"
+      },
+      "actualCost": {
+        "label": "実際のコスト",
+        "placeholder": "実際のコストを入力"
+      },
+      "application": {
+        "label": "アプリケーション",
+        "placeholder": "アプリケーション詳細を入力"
+      },
+      "manager": {
+        "label": "マネージャー",
+        "placeholder": "マネージャーを選択"
+      },
+      "customFields": {
+        "label": "カスタムフィールド",
+        "placeholder": "カスタムフィールドを入力"
+      },
+      "key": {
+        "label": "プロジェクトコード",
+        "placeholder": "プロジェクトコードを入力"
+      },
+      "type": {
+        "label": "主・サブプロジェクト指定",
+        "placeholder": "主・サブプロジェクト指定を選択",
+        "main": "主プロジェクト",
+        "sub": "サブプロジェクト"
+      },
+      "attributes": {
+        "label": "属性 (JSON)",
+        "placeholder": "属性をJSON形式で入力"
+      }
+    },
+    "edit": "プロジェクトを編集",
+    "update": "プロジェクトを更新",
+    "notification": {
+      "createSuccess": "プロジェクトを作成しました。",
+      "createError": "プロジェクトの作成に失敗しました。",
+      "updateSuccess": "プロジェクトを更新しました。",
+      "updateError": "プロジェクトの更新に失敗しました。",
+      "deleteSuccess": "プロジェクトを削除しました。",
+      "deleteError": "プロジェクトの削除に失敗しました。"
+    },
+    "confirmation": {
+      "create": "このプロジェクトを作成してもよろしいですか？",
+      "update": "このプロジェクトを更新してもよろしいですか？",
+      "delete": "このプロジェクトを削除してもよろしいですか？"
+    },
+    "validation": {
+      "nameRequired": "名前は必須です",
+      "descriptionRequired": "説明は必須です",
+      "keyRequired": "キーは必須です",
+      "startDateRequired": "開始日は必須です",
+      "endDateRequired": "終了日は必須です",
+      "statusRequired": "ステータスは必須です",
+      "invalidDate": "無効な日付です",
+      "endDateAfterStart": "終了日は開始日より後である必要があります",
+      "actualEndDateAfterActualStart": "実際の終了日は実際の開始日より後である必要があります"
+    }
+  },
+  "task": {
+    "title": "タスク",
+    "actions": {
+      "create": "タスクを作成",
+      "createChild": "サブタスクを作成",
+      "edit": "タスクを編集",
+      "delete": "タスクを削除",
+      "complete": "タスクを完了",
+      "reopen": "タスクを再開"
+    },
+    "group": {
+      "basic": "基本情報",
+      "schedule": "スケジュール",
+      "people": "人々",
+      "extra": "追加情報"
+    },
+    "form": {
+      "title": {
+        "create": "タスクを作成",
+        "edit": "タスクを更新"
+      },
+      "taskName": "タスク名",
+      "description": {
+        "label": "説明",
+        "placeholder": "説明を入力"
+      },
+      "startDate": {
+        "label": "開始日"
+      },
+      "endDate": {
+        "label": "終了日"
+      },
+      "progress": {
+        "label": "進捗"
+      },
+      "assignee": {
+        "label": "担当者"
+      },
+      "manager": {
+        "label": "マネージャー"
+      },
+      "placeholders": {
+        "taskName": "タスク名を入力",
+        "description": "説明を追加",
+        "unassigned": "未割り当て",
+        "selectDate": "mm/dd/yyyy",
+        "enterNumber": "数値を入力",
+        "enterEmail": "メールアドレスを入力",
+        "enterPhone": "電話番号を入力",
+        "enterWebsite": "ウェブサイトURLを入力",
+        "enterText": "テキストを入力"
+      },
+      "tooltips": {
+        "removeField": "フィールドを削除"
+      },
+      "sections": {
+        "people": "担当者"
+      },
+      "projectId": {
+        "label": "プロジェクトID",
+        "placeholder": "プロジェクトIDを入力"
+      },
+      "externalId": {
+        "label": "外部ID",
+        "placeholder": "外部IDを入力"
+      },
+      "name": {
+        "label": "タスク名",
+        "placeholder": "タスク名を入力"
+      },
+      "startDate": {
+        "label": "開始日",
+        "placeholder": "開始日を選択"
+      },
+      "endDate": {
+        "label": "終了日",
+        "placeholder": "終了日を選択"
+      },
+      "status": {
+        "label": "ステータス"
+      },
+      "priority": {
+        "label": "優先度"
+      },
+      "attribute": "属性",
+      "type": {
+        "label": "タイプ"
+      },
+      "level": {
+        "label": "レベル",
+        "placeholder": "レベルを入力"
+      },
+      "category": {
+        "label": "カテゴリー",
+        "placeholder": "カテゴリーを入力"
+      },
+      "notes": {
+        "label": "メモ",
+        "placeholder": "メモを入力"
+      },
+      "assignee": {
+        "label": "プロジェクト管理者",
+        "placeholder": "プロジェクト管理者を選択"
+      },
+      "manager": {
+        "label": "マネージャー",
+        "placeholder": "マネージャーを選択"
+      },
+      "parentId": {
+        "label": "親タスク",
+        "placeholder": "親タスクを選択"
+      },
+      "dependencies": {
+        "label": "依存関係",
+        "placeholder": "依存するタスクを選択"
+      },
+      "progress": {
+        "label": "進捗",
+        "placeholder": "進捗率を入力"
+      },
+      "customFields": {
+        "label": "カスタムフィールド"
+      },
+      "tags": {
+        "label": "タグ",
+        "placeholder": "タグを入力"
+      },
+      "externalFields": "外部フィールド"
+    },
+    "validation": {
+      "startDateBeforeProject": "タスクの開始日はプロジェクトの開始日より前に設定できません",
+      "endDateBeforeStart": "タスクの終了日は開始日より前に設定できません"
+    },
+    "notification": {
+      "create": "タスクを作成しました",
+      "update": "タスクを更新しました",
+      "delete": "タスクを削除しました"
+    },
+    "confirmation": {
+      "create": "このタスクを作成してもよろしいですか？",
+      "update": "このタスクを更新してもよろしいですか？",
+      "delete": "このタスクを削除してもよろしいですか？"
+    },
+    "tabs": {
+      "details": "詳細",
+      "dependencies": "依存関係"
+    },
+    "dependencies": {
+      "title": "タスクの依存関係",
+      "add": "依存関係を追加",
+      "empty": "依存関係が設定されていません",
+      "targetTask": "対象タスク",
+      "relationType": "関係タイプ",
+      "delayDays": "遅延（日数）",
+      "selectTask": "タスクを選択",
+      "selectRelationType": "関係タイプを選択",
+      "description": "依存関係はタスク間の関係を定義します。例えば、Finish-to-Start（FS）依存関係は、このタスクが完了するまで対象タスクを開始できないことを意味します。",
+      "relationTypes": {
+        "FS": "終了-開始 (FS)",
+        "SS": "開始-開始 (SS)",
+        "FF": "終了-終了 (FF)",
+        "SF": "開始-終了 (SF)",
+        "FSDescription": "このタスクが終了した後に対象タスクが開始します",
+        "SSDescription": "このタスクが開始すると対象タスクも開始します",
+        "FFDescription": "このタスクが終了すると対象タスクも終了します",
+        "SFDescription": "このタスクが開始した後に対象タスクが終了します"
+      },
+      "dragDrop": {
+        "dragging": "タスクを接続するためにドラッグ",
+        "dropToConnect": "対象タスクのノードにドロップして関係を作成",
+        "duplicateRelation": "これらのタスク間には既に関係が存在します",
+        "selfRelation": "タスクから自身への関係は作成できません",
+        "relationCreated": "タスク関係が正常に作成されました",
+        "relationFailed": "タスク関係の作成に失敗しました"
+      }
+    },
+    "relations": {
+      "validation": {
+        "targetTaskRequired": "対象タスクは必須です",
+        "relationTypeRequired": "関係タイプは必須です",
+        "invalidRelationType": "無効な関係タイプです"
+      }
+    },
+    "customFields": {
+      "title": "カスタムフィールド",
+      "createNewField": "新しいフィールドを作成",
+      "noFields": "カスタムフィールドはまだ追加されていません。",
+      "hideEmptyFields": "空のフィールドを非表示",
+      "loadingTypes": "フィールドタイプを読み込み中...",
+      "selectType": "フィールドタイプを選択してください",
+      "remove": "フィールドを削除",
+      "enterValue": "値を入力",
+      "enterLabel": "ラベルを入力",
+      "selectDate": "日付を選択",
+      "selectOption": "オプションを選択",
+      "checkboxLabel": "チェックボックス",
+      "modal": {
+        "title": "フィールドを作成",
+        "fieldName": {
+          "label": "フィールド名",
+          "placeholder": "1"
+        },
+        "description": {
+          "label": "説明（オプション）",
+          "placeholder": "",
+          "help": "タスクやビューでフィールドにカーソルを合わせると説明が表示されます"
+        },
+        "type": {
+          "label": "タイプ",
+          "placeholder": "フィールドタイプを選択"
+        },
+        "actions": {
+          "cancel": "キャンセル",
+          "create": "作成"
+        }
+      }
+    },
+    "status": {
+      "new": "未着手",
+      "in_progress": "進行中",
+      "completed": "完了",
+      "on_hold": "保留"
+    },
+    "priority": {
+      "low": "低優先度",
+      "normal": "通常優先度",
+      "medium": "中優先度",
+      "high": "高優先度",
+      "urgent": "緊急優先度"
+    }
+  },
+  "common": {
+    "lang": "ja",
+    "required": "必須",
+    "today": "今日",
+    "characters": "文字",
+    "loading": "読み込み中…",
+    "refresh": "更新",
+    "cancel": "キャンセル",
+    "days": "日",
+    "status": {
+      "active": "有効",
+      "archived": "アーカイブ済み",
+      "on-hold": "保留",
+      "new": "新規",
+      "in_progress": "進行中",
+      "completed": "完了",
+      "cancelled": "キャンセル済み",
+      "on_hold": "保留",
+      "select": "ステータスを選択"
+    },
+    "priority": {
+      "low": "低",
+      "medium": "中",
+      "normal": "標準",
+      "high": "高",
+      "urgent": "緊急"
+    },
+    "type": {
+      "task": "タスク",
+      "milestone": "マイルストーン",
+      "epic": "エピック",
+      "story": "ストーリー",
+      "bug": "バグ",
+      "feature": "機能"
+    },
+    "assignee": {
+      "none": "担当者未設定",
+      "placeholder": "担当者を選択"
+    }
+  },
+  "button": {
+    "backToList": "リストに戻る",
+    "create": "作成",
+    "save": "保存",
+    "cancel": "キャンセル",
+    "delete": "削除",
+    "edit": "編集",
+    "add": "追加",
+    "remove": "削除",
+    "confirm": "確認",
+    "close": "閉じる",
+    "back": "戻る",
+    "action": "操作",
+    "view": "閲覧",
+    "gantt": "ガント",
+    "ok": "OK"
+  },
+  "pagination": {
+    "previous": "前へ",
+    "next": "次へ",
+    "total": "件",
+    "itemsPerPage": "表示件数",
+    "showing": "{{from}}件〜{{to}}件 / 全{{total}}件"
+  },
+  "noData": "該当データはありません",
+  "modal": {
+    "confirmation": "確認",
+    "editTitle": "タスクを編集",
+    "name": "タスク名",
+    "start": "開始日",
+    "duration": "期間（日）"
+  },
+  "messages": {
+    "required": "は必須です",
+    "invalid": "は無効です",
+    "invalidDate": "無効な日付形式です",
+    "maxLength": "最大{max}文字まで入力できます",
+    "minLength": "最小{min}文字必要です",
+    "min": "最小値は{min}です",
+    "max": "最大値は{max}です",
+    "number": "有効な数値を入力してください",
+    "email": "有効なメールアドレスを入力してください",
+    "codeValidatorError": "コードには文字、数字、ハイフン、アンダースコアのみ使用できます",
+    "endDateAfterStart": "終了日は開始日より後である必要があります",
+    "endDateBeforeStart": "終了日は開始日より前である必要があります",
+    "dateOutOfRange": "日付はプロジェクトの日付範囲内である必要があります",
+    "commonError": "エラーが発生しました。もう一度お試しください。",
+    "INVALID_EMAIL_FORMAT": "メールアドレスの形式が正しくありません。",
+    "INVALID_STRING_TYPE": "文字列の形式が正しくありません。",
+    "INVALID_NUMBER_TYPE": "数値の形式が正しくありません。",
+    "FIELD_REQUIRED": "必須項目です。",
+    "INVALID_UUID_FORMAT": "UUIDの形式が正しくありません。",
+    "INVALID_ENUM_VALUE": "不正な値です。",
+    "VALUE_TOO_SMALL": "最小値は{min}です。",
+    "VALUE_TOO_LARGE": "最大値は{max}です。",
+    "STRING_TOO_SHORT": "最小{min}文字必要です。",
+    "STRING_TOO_LONG": "最大{max}文字まで入力できます。",
+    "INVALID_BOOLEAN_TYPE": "ブール値の形式が正しくありません。",
+    "INVALID_ARRAY_TYPE": "配列の形式が正しくありません。",
+    "INVALID_OBJECT_TYPE": "オブジェクトの形式が正しくありません。",
+    "BUSINESS_LOGIC_ERROR": "ビジネスロジックエラーが発生しました。",
+    "EMPTY_OBJECT": "空のオブジェクトです。",
+    "INVALID_DATE_FORMAT": "日付の形式が正しくありません。",
+    "VALIDATION_ERROR": "バリデーションエラーが発生しました。",
+    "FIELD_ALREADY_EXISTS": "フィールドが既に存在します。"
+  },
+  "groups": {
+    "basic": "基本情報",
+    "details": "詳細",
+    "dates": "日付",
+    "assignment": "割り当て",
+    "advanced": "詳細設定",
+    "custom": "カスタム"
+  },
+  "gantt": {
+    "export": "エクスポート",
+    "tasks": "タスク",
+    "addTask": "タスクを追加",
+    "viewMode": {
+      "placeholder": "ビュー",
+      "days": "日",
+      "weeks": "週",
+      "months": "月"
+    },
+    "viewType": {
+      "label": "表示タイプ",
+      "flat": "フラット表示",
+      "tree": "ツリー表示"
+    },
+    "filters": {
+      "time": {
+        "previous": "前",
+        "next": "次",
+        "today": "今日",
+        "resetToProject": "プロジェクトに戻す"
+      },
+      "type": {
+        "placeholder": "タイプ",
+        "all": "すべてのタイプ",
+        "task": "タスク",
+        "milestone": "マイルストーン",
+        "project": "プロジェクト"
+      },
+      "status": {
+        "placeholder": "ステータス",
+        "all": "すべてのステータス",
+        "new": "新規",
+        "inProgress": "進行中",
+        "completed": "完了",
+        "cancelled": "キャンセル済み",
+        "onHold": "保留"
+      },
+      "priority": {
+        "placeholder": "優先度",
+        "all": "すべての優先度",
+        "low": "低",
+        "normal": "標準",
+        "high": "高",
+        "urgent": "緊急"
+      },
+      "assignee": {
+        "placeholder": "担当者",
+        "all": "すべての担当者"
+      },
+      "search": {
+        "placeholder": "プロジェクトを検索...",
+        "byName": "名前で検索"
+      },
+      "dateRange": {
+        "startFrom": "開始日から",
+        "endTo": "終了日まで",
+        "actualStartFrom": "実際の開始日から",
+        "actualEndTo": "実際の終了日まで"
+      }
+    },
+    "messages": {
+      "selectProject": "タスクを読み込むプロジェクトを選択してください。",
+      "loadingTasks": "タスクを読み込んでいます...",
+      "noTasks": "タスクが見つかりません。最初のタスクを作成してください。",
+      "pleaseChooseProject": "ガントチャートを操作するには、プロジェクトを選択してください。"
+    }
+  },
+  "parentTaskModal": {
+    "title": "親タスクを更新",
+    "description": "子タスクを持つ「{{taskName}}」の{{updateType}}を変更しようとしています。",
+    "question": "子タスクをどのように処理しますか？",
+    "updateType": {
+      "duration": "期間",
+      "dates": "開始/終了日"
+    },
+    "options": {
+      "updateAll": {
+        "title": "親とすべての子を更新",
+        "description": "関係を維持するため子タスクの{{updateType}}を調整します"
+      },
+      "updateParentOnly": {
+        "title": "親タスクのみを更新",
+        "description": "子タスクは変更しません"
+      }
+    }
+  },
+  "assignee": {
+    "none": "担当者未設定"
+  },
+  "header": {
+    "viewMode": "表示モード",
+    "day": "日",
+    "month": "月",
+    "year": "年",
+    "week": "週"
+  },
+  "tree": {
+    "addChild": "サブタスクを追加",
+    "collapse": "折りたたむ",
+    "expand": "展開"
+  },
+  "controls": {
+    "showFilters": "フィールドを表示",
+    "hideFilters": "フィールドを非表示",
+    "expandTree": "ツリーパネルを展開",
+    "minimizeTree": "ツリーパネルを最小化（スクロールのみ）",
+    "showMountainChart": "山積み",
+    "mountainChart": "山積み",
+    "mountainChartDescription": "作業量の可視化"
+  },
+  "tooltip": {
+    "resizeLeft": "左にリサイズ",
+    "resizeRight": "右にリサイズ",
+    "move": "移動"
+  }
+}

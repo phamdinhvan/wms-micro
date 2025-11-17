@@ -1,0 +1,213 @@
+/* CSS Custom Properties for Gantt Theme System */
+:root {
+  /* Primary Colors */
+  --gantt-primary: #111770;
+  --gantt-primary-50: #e8eaf6;
+  --gantt-primary-100: #d1d5ed;
+  --gantt-primary-200: #c5cae9;
+  --gantt-primary-300: #7986cb;
+  --gantt-primary-400: #3f51b5;
+  --gantt-primary-500: #111770;
+  --gantt-primary-600: #0f1460;
+  --gantt-primary-700: #0d1150;
+  --gantt-primary-800: #0a0e40;
+  --gantt-primary-900: #070a30;
+
+  /* Font Family */
+  --gantt-font-family: 'Inter, system-ui, sans-serif';
+
+  /* Status Colors */
+  --gantt-status-new: #6b7280;
+  --gantt-status-in-progress: #3b82f6;
+  --gantt-status-completed: #10b981;
+  --gantt-status-cancelled: #ef4444;
+  --gantt-status-on-hold: #f59e0b;
+
+  /* Priority Colors */
+  --gantt-priority-low: #10b981;
+  --gantt-priority-normal: #3b82f6;
+  --gantt-priority-high: #f59e0b;
+  --gantt-priority-urgent: #ef4444;
+
+  /* UI Colors */
+  --gantt-background: #ffffff;
+  --gantt-surface: #f9fafb;
+  --gantt-border: #e5e7eb;
+  --gantt-text: #111827;
+  --gantt-text-secondary: #6b7280;
+  --gantt-text-muted: #9ca3af;
+
+  /* Interactive Colors */
+  --gantt-hover: #f3f4f6;
+  --gantt-selected: #dbeafe;
+  --gantt-focus: #3b82f6;
+}
+
+/* Tailwind utility classes using CSS variables */
+.wms-bg-primary {
+  background-color: var(--gantt-primary);
+}
+.wms-text-primary {
+  color: var(--gantt-primary);
+}
+.wms-border-primary {
+  border-color: var(--gantt-primary);
+}
+
+.wms-bg-primary-50 {
+  background-color: var(--gantt-primary-50);
+}
+.wms-bg-primary-100 {
+  background-color: var(--gantt-primary-100);
+}
+.wms-bg-primary-200 {
+  background-color: var(--gantt-primary-200);
+}
+.wms-bg-primary-300 {
+  background-color: var(--gantt-primary-300);
+}
+.wms-bg-primary-400 {
+  background-color: var(--gantt-primary-400);
+}
+.wms-bg-primary-500 {
+  background-color: var(--gantt-primary-500);
+}
+.wms-bg-primary-600 {
+  background-color: var(--gantt-primary-600);
+}
+.wms-bg-primary-700 {
+  background-color: var(--gantt-primary-700);
+}
+.wms-bg-primary-800 {
+  background-color: var(--gantt-primary-800);
+}
+.wms-bg-primary-900 {
+  background-color: var(--gantt-primary-900);
+}
+
+.wms-text-primary-50 {
+  color: var(--gantt-primary-50);
+}
+.wms-text-primary-100 {
+  color: var(--gantt-primary-100);
+}
+.wms-text-primary-200 {
+  color: var(--gantt-primary-200);
+}
+.wms-text-primary-300 {
+  color: var(--gantt-primary-300);
+}
+.wms-text-primary-400 {
+  color: var(--gantt-primary-400);
+}
+.wms-text-primary-500 {
+  color: var(--gantt-primary-500);
+}
+.wms-text-primary-600 {
+  color: var(--gantt-primary-600);
+}
+.wms-text-primary-700 {
+  color: var(--gantt-primary-700);
+}
+.wms-text-primary-800 {
+  color: var(--gantt-primary-800);
+}
+.wms-text-primary-900 {
+  color: var(--gantt-primary-900);
+}
+
+.wms-border-primary-50 {
+  border-color: var(--gantt-primary-50);
+}
+.wms-border-primary-100 {
+  border-color: var(--gantt-primary-100);
+}
+.wms-border-primary-200 {
+  border-color: var(--gantt-primary-200);
+}
+.wms-border-primary-300 {
+  border-color: var(--gantt-primary-300);
+}
+.wms-border-primary-400 {
+  border-color: var(--gantt-primary-400);
+}
+.wms-border-primary-500 {
+  border-color: var(--gantt-primary-500);
+}
+.wms-border-primary-600 {
+  border-color: var(--gantt-primary-600);
+}
+.wms-border-primary-700 {
+  border-color: var(--gantt-primary-700);
+}
+.wms-border-primary-800 {
+  border-color: var(--gantt-primary-800);
+}
+.wms-border-primary-900 {
+  border-color: var(--gantt-primary-900);
+}
+
+/* Status color utilities */
+.wms-bg-status-new {
+  background-color: var(--gantt-status-new);
+}
+.wms-bg-status-in-progress {
+  background-color: var(--gantt-status-in-progress);
+}
+.wms-bg-status-completed {
+  background-color: var(--gantt-status-completed);
+}
+.wms-bg-status-cancelled {
+  background-color: var(--gantt-status-cancelled);
+}
+.wms-bg-status-on-hold {
+  background-color: var(--gantt-status-on-hold);
+}
+
+.wms-text-status-new {
+  color: var(--gantt-status-new);
+}
+.wms-text-status-in-progress {
+  color: var(--gantt-status-in-progress);
+}
+.wms-text-status-completed {
+  color: var(--gantt-status-completed);
+}
+.wms-text-status-cancelled {
+  color: var(--gantt-status-cancelled);
+}
+.wms-text-status-on-hold {
+  color: var(--gantt-status-on-hold);
+}
+
+/* Priority color utilities */
+.wms-bg-priority-low {
+  background-color: var(--gantt-priority-low);
+}
+.wms-bg-priority-normal {
+  background-color: var(--gantt-priority-normal);
+}
+.wms-bg-priority-high {
+  background-color: var(--gantt-priority-high);
+}
+.wms-bg-priority-urgent {
+  background-color: var(--gantt-priority-urgent);
+}
+
+.wms-text-priority-low {
+  color: var(--gantt-priority-low);
+}
+.wms-text-priority-normal {
+  color: var(--gantt-priority-normal);
+}
+.wms-text-priority-high {
+  color: var(--gantt-priority-high);
+}
+.wms-text-priority-urgent {
+  color: var(--gantt-priority-urgent);
+}
+
+/* Font family utility */
+.wms-font-gantt {
+  font-family: var(--gantt-font-family);
+}

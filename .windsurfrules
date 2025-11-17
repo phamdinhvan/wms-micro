@@ -1,0 +1,156 @@
+WINDSURF RULES — MONOREPO UI LIB
+
+PROJECT CONTEXT
+
+- Monorepo: Turborepo + yarn
+- Tech: TypeScript (strict), React 18, Mantine 7, Tailwind v4 (CSS-first), tsup (build), Storybook 8, Vitest + Testing Library
+- Node >= 18, outputs ESM + CJS, moduleResolution: nodenext
+- Structure:
+  - apps/\* (playground, docs, demo)
+  - ui/\* (mỗi package là một UI component library con, vd: ui-button, ui-input)
+  - packages/theme (design tokens)
+  - packages/tailwind-config (styles.css, utilities)
+  - packages/tsconfig (base tsconfig)
+
+GLOBAL INSTRUCTIONS
+
+- Viết code an toàn, a11y-ready; không export default component, chỉ dùng named exports.
+- Không hard-code màu; lấy từ tokens/theme. Tailwind className là chính, hạn chế inline style.
+- Mọi package ui-\* phải có: src/index.ts, component, test, stories, README, tsup config, package.json chuẩn.
+- CSS global (Mantine + Tailwind) chỉ import ở apps/_, KHÔNG import trong ui-_ (tránh side-effects).
+- React, react-dom, @mantine/_ LUÔN nằm ở peerDependencies của ui-_. Không cho vào dependencies.
+- Khi thêm tính năng, cập nhật Changesets và tuân Conventional Commits (feat:, fix:, chore:, docs:, refactor:).
+
+PACKAGE.JSON REQUIREMENTS (ui-\*/package.json)
+
+- "type": "module"
+- "main": "dist/index.cjs"
+- "module": "dist/index.mjs"
+- "types": "dist/index.d.ts"
+- "sideEffects": false
+- "files": ["dist", "README.md", "LICENSE"]
+- "peerDependencies": { "react": ">=18", "react-dom": ">=18", "@mantine/core": "^7", "@mantine/hooks": "^7" }
+- "devDependencies": chỉ bao gồm công cụ build/test (tsup, typescript, vitest, @testing-library/react, storybook)
+
+BUILD & BUNDLE (tsup defaults)
+
+- dts: true
+- sourcemap: true
+- splitting: false
+- minify: false
+- external: ["react","react-dom","@mantine/core","@mantine/hooks","classnames","tailwind-merge"]
+- tsconfig: dùng base ở packages/tsconfig/tsconfig.lib.json
+
+CODING CONVENTIONS
+
+- TS strict: strictNullChecks, noImplicitAny.
+- ESLint + Prettier theo root config.
+- Import bằng tsconfig paths (@org/\*). Tránh import tương đối dài (../../..).
+- Component: PascalCase; hooks: useXxx; file: kebab-case.ts/tsx.
+- Phải set Component.displayName.
+- API props tối giản; có default hợp lý; cân nhắc variants rõ ràng (e.g., 'solid'|'outline'|'ghost').
+
+ACCESSIBILITY
+
+- Bắt buộc role, aria-\* phù hợp; keyboard navigation; focus ring rõ.
+- Contrast >= WCAG AA.
+
+TESTING & QUALITY
+
+- Vitest + Testing Library:
+  - Render test + interaction + a11y smoke.
+  - Coverage tối thiểu 80% cho ui-\*.
+- Storybook (CSF3) có ít nhất 1 story thể hiện các state/variant chính.
+- Không merge nếu thiếu tests hoặc stories.
+
+TAILWIND & MANTINE
+
+- Tailwind v4: chỉ cần styles.css trung tâm trong packages/tailwind-config; ui-\* chỉ dùng className.
+- Mantine: chỉ dùng khi cần logic/primitive; style override qua theme với WmsProvider.
+- Mantine CSS ('@mantine/core/styles.css') chỉ import ở apps/_ (entry), không trong ui-_.
+
+PROVIDER
+
+- Provider chuẩn: @org/provider/WmsProvider
+  - Bọc MantineProvider và base Tailwind.
+  - Cho phép theme override qua props.
+  - Không import CSS global ở trong lib provider — import ở app entry.
+
+MONOREPO DEP GRAPH
+
+- ui-\* chỉ phụ thuộc:
+  - shared packages (packages/theme, packages/tailwind-config, packages/tsconfig)
+  - hoặc ui-\* "cấp thấp" hơn theo phân tầng (tránh vòng phụ thuộc)
+- Cấm import vòng (A -> B -> A). Nếu nghi ngờ, đề nghị tách shared.
+
+GUARDRAILS (HARD RULES)
+
+- KHÔNG thêm react/react-dom/@mantine/_ vào "dependencies" của ui-_.
+- KHÔNG import CSS global từ ui-\*.
+- KHÔNG export default component.
+- KHÔNG phá vỡ API mà không tăng major + ghi Changesets.
+- KHÔNG thêm config riêng lẻ làm lệch build chung (tsup/tsconfig).
+
+TASK BLUEPRINTS (Use these as step-by-step plans)
+
+[Blueprint] Add NEW UI package (e.g., ui-badge)
+
+1. Tạo thư mục ui/ui-badge với cấu trúc:
+   - src/index.ts
+   - src/Badge.tsx
+   - src/Badge.test.tsx
+   - src/Badge.stories.tsx
+   - README.md
+   - tsup.config.ts
+   - package.json (theo “PACKAGE.JSON REQUIREMENTS”)
+2. Implement Badge:
+   - forwardRef<HTMLSpanElement>
+   - props: variant ('solid'|'outline'|'ghost'), size ('sm'|'md'|'lg'), className
+   - displayName = 'Badge'; named export.
+   - className theo Tailwind; màu từ tokens/theme.
+3. Tests: render + variants + a11y (role, aria-label nếu cần).
+4. Stories: các variants/size; docs controls.
+5. Build: yarn build
+6. Verify bundle: peers không bị bundle vào; size OK.
+7. Add changeset + Conventional Commit.
+
+[Blueprint] Add NEW component to existing package
+
+1. Tạo src/Component.tsx + test + stories; export từ src/index.ts.
+2. Tuân conventions & a11y; không default export.
+3. Cập nhật README với props & usage examples.
+4. Build + test + storybook; đạt coverage.
+5. Changesets + commit.
+
+[Blueprint] Fix “MantineProvider was not found”
+
+- Đảm bảo apps/\* bọc <WmsProvider> tại root layout.
+- Import '@mantine/core/styles.css' + 'packages/tailwind-config/styles.css' ở app entry.
+- Không import CSS từ ui-\*.
+
+[Blueprint] ESM/CJS Resolution Errors (Node16/Next)
+
+- Sử dụng moduleResolution: 'nodenext'
+- Dist import đuôi .js/.mjs rõ ràng nếu cần.
+- Đảm bảo "main"/"module" trỏ đúng file trong dist.
+
+CHECKLIST BEFORE MERGE
+
+- [ ] Build OK (yarn build) và storybook chạy.
+- [ ] Tests pass, coverage >= 80%.
+- [ ] No CSS side-effects trong ui-\*.
+- [ ] Peer deps đúng; không lọt vào dependencies.
+- [ ] Docs/README/stories rõ ràng.
+- [ ] Changeset có và commit chuẩn.
+
+QUICK COMMANDS (assumed)
+
+- yarn build # build toàn monorepo
+- yarn test # chạy test toàn cục
+- yarn storybook # dev storybook (app docs)
+- yarn new:ui <name> # (nếu có) scaffold gói ui mới theo mẫu
+
+NOTE
+
+- Nếu cần tăng tốc, trợ lý có thể đề xuất script scaffold (yarn new:ui) và tạo template theo “Add NEW UI package”.
+- Mọi thay đổi phá vỡ cần: PR note, changelog từ Changesets, bump major.

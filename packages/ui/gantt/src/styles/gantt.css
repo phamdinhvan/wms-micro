@@ -1,0 +1,230 @@
+/* Timing + easing (tweak if you want) */
+:root {
+  --hover-dur: 200ms;
+  --ease-out: cubic-bezier(0.22, 0.61, 0.36, 1); /* smooth ease-out */
+}
+
+/* Prevent horizontal scrolling only within gantt container */
+.gantt-container {
+  overflow-x: hidden;
+}
+
+/* --- Gantt timeline base --- */
+.wms-task {
+  transition:
+    left 0.12s ease-out,
+    width 0.12s ease-out;
+}
+
+/* Prevent text selection and dragging within tasks */
+.wms-task,
+.wms-task *,
+.wms-bar,
+.wms-bar *,
+.wms-label,
+.wms-notches {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+  user-drag: none;
+}
+
+/* wrapper for sides + center (no background here) */
+.wms-bar {
+  position: absolute;
+  inset: 0;
+  inset: 0;
+  border-radius: 5px;
+  pointer-events: none;
+}
+
+/* SIDE BANDS — base 70% transparent (30% opacity) */
+.wms-bar::before,
+.wms-bar::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: var(--wms-side-w, 10px);
+  background-color: color-mix(
+    in srgb,
+    var(--wms-bg),
+    transparent calc(100% - var(--wms-op-base, 30%))
+  );
+  transition: background-color var(--hover-dur) var(--ease-out);
+}
+.wms-bar::before {
+  left: 0;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+.wms-bar::after {
+  right: 0;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+/* CENTER FILL — base 70% transparent (30% opacity) */
+.wms-center {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: var(--wms-side-w, 10px);
+  right: var(--wms-side-w, 10px);
+  background-color: color-mix(
+    in srgb,
+    var(--wms-bg),
+    transparent calc(100% - var(--wms-op-base, 30%))
+  );
+  border-radius: 0;
+  transition: background-color var(--hover-dur) var(--ease-out);
+}
+
+/* HOVER: center stays 70% transparent; sides go to 40% transparent (60% opacity) */
+.wms-task:hover .wms-center {
+  background-color: color-mix(
+    in srgb,
+    var(--wms-bg),
+    transparent calc(100% - var(--wms-op-center-hover, 30%))
+  );
+}
+.wms-task:hover .wms-bar::before,
+.wms-task:hover .wms-bar::after {
+  background-color: color-mix(
+    in srgb,
+    var(--wms-bg),
+    transparent calc(100% - var(--wms-op-side-hover, 60%))
+  );
+}
+
+/* BORDER + SHADOW — same base opacity; animate lightly for smoothness */
+.wms-task::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 5px;
+  pointer-events: none;
+  transition: box-shadow var(--hover-dur) var(--ease-out);
+  /* new: subtle shadow */
+  box-shadow:
+    0 1px 3px rgba(0, 0, 0, 0.06),
+    0 1px 2px rgba(0, 0, 0, 0.12);
+}
+
+/* Label */
+.wms-label {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 14px;
+  line-height: 1;
+  color: #111;
+  white-space: nowrap;
+  overflow: visible;
+  pointer-events: none;
+  font-weight: 500;
+}
+
+/* Handles */
+.resize-handle {
+  position: absolute;
+  top: 0;
+  width: 6px;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.12s;
+  cursor: ew-resize;
+}
+.wms-task:hover .resize-handle {
+  opacity: 1;
+}
+.resize-left {
+  left: 0;
+}
+.resize-right {
+  right: 0;
+}
+
+/* Accessibility: respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .wms-center,
+  .wms-bar::before,
+  .wms-bar::after,
+  .wms-task::after {
+    transition-duration: 100ms;
+  }
+}
+
+/* Parent corner triangles — flush, no gap */
+.wms-parent {
+  overflow: visible;
+}
+.wms-parent {
+  --tri-size: 8px; /* notch size; set to your bar radius if you want */
+  --tri-color: color-mix(
+    in srgb,
+    var(--wms-bg),
+    transparent calc(100% - var(--wms-op-side-hover, 60%))
+  );
+}
+
+/* sit directly under the bar; overlap 1px to avoid hairline */
+.wms-parent .wms-notches {
+  position: absolute;
+  top: calc(100% - 1px);
+  left: 0;
+  right: 0;
+  height: var(--tri-size);
+  pointer-events: none;
+}
+
+/* left & right corner wedges */
+.wms-parent .wms-notches::before,
+.wms-parent .wms-notches::after {
+  content: '';
+  position: absolute;
+  width: var(--tri-size);
+  height: var(--tri-size);
+  background: var(--tri-color);
+}
+
+/* left wedge: diagonal from bottom-left corner */
+.wms-parent .wms-notches::before {
+  left: 0;
+  clip-path: polygon(0 0, 100% 0, 0 100%);
+}
+
+/* right wedge: diagonal from bottom-right corner */
+.wms-parent .wms-notches::after {
+  right: 0;
+  clip-path: polygon(100% 0, 100% 100%, 0 0);
+}
+
+/* Square the bottom on every layer for parents */
+.wms-parent .wms-bar,
+.wms-parent .wms-bar::before,
+.wms-parent .wms-bar::after,
+.wms-parent.wms-task::after {
+  border-bottom-left-radius: 0 !important;
+  border-bottom-right-radius: 0 !important;
+}
+
+/* Keep the corner wedges on top of the border overlay */
+.wms-parent .wms-notches {
+  z-index: 2;
+}
+.wms-parent.wms-task::after {
+  z-index: 1;
+  border: 2px solid
+    color-mix(
+      in srgb,
+      var(--wms-bg),
+      transparent calc(100% - var(--wms-op-base, 30%))
+    );
+}

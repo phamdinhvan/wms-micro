@@ -1,0 +1,453 @@
+/* Gantt Library Utility Classes */
+/* This file contains all the wms- prefixed utility classes used throughout the library */
+/* to ensure they work when the library is used externally */
+
+/* Spacing - Padding */
+.wms-p-0 {
+  padding: 0;
+}
+.wms-p-1 {
+  padding: 0.25rem;
+}
+.wms-p-2 {
+  padding: 0.5rem;
+}
+.wms-p-3 {
+  padding: 0.75rem;
+}
+.wms-p-4 {
+  padding: 1rem;
+}
+.wms-p-5 {
+  padding: 1.25rem;
+}
+.wms-p-6 {
+  padding: 1.5rem;
+}
+.wms-p-8 {
+  padding: 2rem;
+}
+
+.wms-px-1 {
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
+}
+.wms-px-2 {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+.wms-px-3 {
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+}
+.wms-px-4 {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.wms-py-1 {
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+}
+.wms-py-2 {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+.wms-py-3 {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+.wms-py-4 {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+/* Spacing - Margin */
+.wms-m-0 {
+  margin: 0;
+}
+.wms-m-1 {
+  margin: 0.25rem;
+}
+.wms-m-2 {
+  margin: 0.5rem;
+}
+.wms-m-3 {
+  margin: 0.75rem;
+}
+.wms-m-4 {
+  margin: 1rem;
+}
+
+.wms-mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+.wms-mt-2 {
+  margin-top: 0.5rem;
+}
+.wms-mt-4 {
+  margin-top: 1rem;
+}
+.wms-mb-2 {
+  margin-bottom: 0.5rem;
+}
+.wms-mb-4 {
+  margin-bottom: 1rem;
+}
+
+/* Layout - Display */
+.wms-block {
+  display: block;
+}
+.wms-inline-block {
+  display: inline-block;
+}
+.wms-inline {
+  display: inline;
+}
+.wms-flex {
+  display: flex;
+}
+.wms-inline-flex {
+  display: inline-flex;
+}
+.wms-grid {
+  display: grid;
+}
+.wms-hidden {
+  display: none;
+}
+
+/* Layout - Position */
+.wms-static {
+  position: static;
+}
+.wms-fixed {
+  position: fixed;
+}
+.wms-absolute {
+  position: absolute;
+}
+.wms-relative {
+  position: relative;
+}
+.wms-sticky {
+  position: sticky;
+}
+
+/* Layout - Top/Right/Bottom/Left */
+.wms-top-0 {
+  top: 0;
+}
+.wms-right-0 {
+  right: 0;
+}
+.wms-bottom-0 {
+  bottom: 0;
+}
+.wms-left-0 {
+  left: 0;
+}
+
+/* Flexbox */
+.wms-flex-col {
+  flex-direction: column;
+}
+.wms-flex-row {
+  flex-direction: row;
+}
+.wms-flex-wrap {
+  flex-wrap: wrap;
+}
+.wms-items-center {
+  align-items: center;
+}
+.wms-items-start {
+  align-items: flex-start;
+}
+.wms-items-end {
+  align-items: flex-end;
+}
+.wms-justify-center {
+  justify-content: center;
+}
+.wms-justify-between {
+  justify-content: space-between;
+}
+.wms-justify-end {
+  justify-content: flex-end;
+}
+.wms-justify-start {
+  justify-content: flex-start;
+}
+
+/* Grid */
+.wms-grid-cols-1 {
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+.wms-grid-cols-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+.wms-grid-cols-3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+.wms-grid-cols-4 {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+.wms-grid-cols-5 {
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+.wms-grid-cols-6 {
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+}
+
+.wms-col-span-1 {
+  grid-column: span 1 / span 1;
+}
+.wms-col-span-2 {
+  grid-column: span 2 / span 2;
+}
+.wms-col-span-3 {
+  grid-column: span 3 / span 3;
+}
+
+.wms-gap-1 {
+  gap: 0.25rem;
+}
+.wms-gap-2 {
+  gap: 0.5rem;
+}
+.wms-gap-3 {
+  gap: 0.75rem;
+}
+.wms-gap-4 {
+  gap: 1rem;
+}
+
+/* Sizing */
+.wms-w-full {
+  width: 100%;
+}
+.wms-w-auto {
+  width: auto;
+}
+.wms-w-fit {
+  width: fit-content;
+}
+.wms-h-full {
+  height: 100%;
+}
+.wms-h-auto {
+  height: auto;
+}
+.wms-h-fit {
+  height: fit-content;
+}
+
+.wms-min-w-0 {
+  min-width: 0;
+}
+.wms-min-h-0 {
+  min-height: 0;
+}
+.wms-max-w-full {
+  max-width: 100%;
+}
+.wms-max-h-full {
+  max-height: 100%;
+}
+
+/* Typography */
+.wms-text-xs {
+  font-size: 0.75rem;
+  line-height: 1rem;
+}
+.wms-text-sm {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+.wms-text-base {
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+.wms-text-lg {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+.wms-text-xl {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
+.wms-font-medium {
+  font-weight: 500;
+}
+.wms-font-semibold {
+  font-weight: 600;
+}
+.wms-font-bold {
+  font-weight: 700;
+}
+
+.wms-text-left {
+  text-align: left;
+}
+.wms-text-center {
+  text-align: center;
+}
+.wms-text-right {
+  text-align: right;
+}
+
+/* Colors */
+.wms-text-white {
+  color: #ffffff;
+}
+.wms-text-black {
+  color: #000000;
+}
+.wms-text-gray-500 {
+  color: #6b7280;
+}
+.wms-text-gray-600 {
+  color: #4b5563;
+}
+.wms-text-gray-700 {
+  color: #374151;
+}
+.wms-text-gray-800 {
+  color: #1f2937;
+}
+.wms-text-gray-900 {
+  color: #111827;
+}
+
+.wms-bg-white {
+  background-color: #ffffff;
+}
+.wms-bg-gray-50 {
+  background-color: #f9fafb;
+}
+.wms-bg-gray-100 {
+  background-color: #f3f4f6;
+}
+.wms-bg-gray-200 {
+  background-color: #e5e7eb;
+}
+
+/* Borders */
+.wms-border {
+  border-width: 1px;
+}
+.wms-border-0 {
+  border-width: 0;
+}
+.wms-border-2 {
+  border-width: 2px;
+}
+
+.wms-border-gray-200 {
+  border-color: #e5e7eb;
+}
+.wms-border-gray-300 {
+  border-color: #d1d5db;
+}
+.wms-border-gray-400 {
+  border-color: #9ca3af;
+}
+
+.wms-border-timeline {
+  border-color: var(--gantt-border-timeline, #e5e7eb);
+}
+.wms-border-timeline-month-end {
+  border-color: var(--gantt-border-timeline-month-end, #9ca3af);
+}
+
+.wms-rounded {
+  border-radius: 0.25rem;
+}
+.wms-rounded-md {
+  border-radius: 0.375rem;
+}
+.wms-rounded-lg {
+  border-radius: 0.5rem;
+}
+
+/* Effects */
+.wms-shadow {
+  box-shadow:
+    0 1px 3px 0 rgba(0, 0, 0, 0.1),
+    0 1px 2px 0 rgba(0, 0, 0, 0.06);
+}
+.wms-shadow-sm {
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+}
+.wms-shadow-md {
+  box-shadow:
+    0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+/* Responsive - Large screens */
+@media (min-width: 1024px) {
+  .wms-lg\:grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .wms-lg\:grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  .wms-lg\:grid-cols-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+/* Font Families */
+.wms-font-primary {
+  font-family: var(--gantt-font-primary, sans-serif);
+}
+.wms-font-numeric {
+  font-family: var(--gantt-font-numeric, monospace);
+}
+.wms-font-mono {
+  font-family: var(--gantt-font-mono, monospace);
+}
+
+/* Custom Gantt-specific utilities */
+.wms-task {
+  cursor: pointer;
+}
+.wms-task:hover {
+  opacity: 0.8;
+}
+
+.wms-resize-handle {
+  cursor: ew-resize;
+  width: 4px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+}
+
+.wms-resize-handle:hover {
+  background-color: rgba(59, 130, 246, 0.5);
+}
+
+/* Scrollbar styles */
+.wms-scrollbar-thin::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+.wms-scrollbar-thin::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.wms-scrollbar-thin::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 3px;
+}
+
+.wms-scrollbar-thin::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
+}

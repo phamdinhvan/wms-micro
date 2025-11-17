@@ -1,0 +1,41 @@
+/* Font utility classes for Gantt chart components */
+
+/* Primary font - used for general text, headings, and UI elements */
+.wms-font-primary {
+  font-family: var(--gantt-font-primary, sans-serif);
+}
+
+/* Numeric font - used for numbers, dates, and numeric data */
+.wms-font-numeric {
+  font-family: var(--gantt-font-numeric, monospace);
+}
+
+/* Monospace font - used for code, IDs, and fixed-width text */
+.wms-font-mono {
+  font-family: var(--gantt-font-mono, monospace);
+}
+
+/* Apply font families to specific Gantt components */
+.gantt-task-name {
+  font-family: var(--gantt-font-primary, sans-serif);
+}
+
+.gantt-task-dates,
+.gantt-task-duration,
+.gantt-task-progress {
+  font-family: var(--gantt-font-numeric, monospace);
+}
+
+.gantt-task-id,
+.gantt-task-key {
+  font-family: var(--gantt-font-mono, monospace);
+}
+
+/* Timeline header fonts */
+.gantt-timeline-header {
+  font-family: var(--gantt-font-primary, sans-serif);
+}
+
+.gantt-timeline-dates {
+  font-family: var(--gantt-font-numeric, monospace);
+}
